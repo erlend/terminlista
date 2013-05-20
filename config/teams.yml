@@ -1,0 +1,588 @@
+aalesund:
+  :id: 15
+  :name: Aalesund
+aalesund-2:
+  :id: 26863
+  :name: Aalesund 2
+algard:
+  :id: 355
+  :name: Ålgård
+alta:
+  :id: 619
+  :name: Alta
+alta-damer:
+  :id: 121366
+  :name: Alta (Damer)
+amazon-grimstad:
+  :id: 671
+  :name: Amazon Grimstad
+arendal-fotball:
+  :id: 133618
+  :name: Arendal Fotball
+arna-bjornar:
+  :id: 697
+  :name: Arna-Bjørnar
+arna-bjornar-damer:
+  :id: 344
+  :name: Arna-Bjørnar (Damer)
+asane:
+  :id: 126
+  :name: Åsane
+asane-damer:
+  :id: 133904
+  :name: Åsane (Damer)
+asker:
+  :id: 712
+  :name: Asker
+askim:
+  :id: 1
+  :name: Askim
+austevoll:
+  :id: 515
+  :name: Austevoll
+avaldsnes:
+  :id: 411
+  :name: Avaldsnes
+avaldsnes-damer:
+  :id: 16606
+  :name: Avaldsnes (Damer)
+baerum:
+  :id: 275
+  :name: Bærum
+birkebeineren:
+  :id: 31
+  :name: Birkebeineren
+bjarg:
+  :id: 24
+  :name: Bjarg
+bodo-glimt:
+  :id: 4
+  :name: Bodø/Glimt
+bossekop:
+  :id: 617
+  :name: Bossekop
+brann:
+  :id: 298
+  :name: Brann
+brann-2:
+  :id: 345
+  :name: Brann 2
+brumunddal:
+  :id: 836
+  :name: Brumunddal
+bryne:
+  :id: 205
+  :name: Bryne
+buvik:
+  :id: 219
+  :name: Buvik
+byasen:
+  :id: 31139
+  :name: Byåsen
+byasen-kf:
+  :id: 763
+  :name: Byåsen KF
+donn:
+  :id: 253
+  :name: Donn
+drammen-fk:
+  :id: 422
+  :name: Drammen FK
+drobak-frogn:
+  :id: 693
+  :name: Drøbak/Frogn
+egersund:
+  :id: 475
+  :name: Egersund
+eidsvold-tf:
+  :id: 756
+  :name: Eidsvold TF
+eik-tonsberg:
+  :id: 13690
+  :name: Eik Tønsberg
+elverum:
+  :id: 60
+  :name: Elverum
+faaberg:
+  :id: 11115
+  :name: Faaberg
+fana:
+  :id: 415
+  :name: Fana
+fana-damer:
+  :id: 16678
+  :name: Fana (Damer)
+fart:
+  :id: 452
+  :name: Fart
+finnsnes:
+  :id: 643
+  :name: Finnsnes
+fk-tonsberg:
+  :id: 730
+  :name: FK Tønsberg
+flekkefjord:
+  :id: 120142
+  :name: Flekkefjord
+flekkeroy:
+  :id: 30229
+  :name: Flekkerøy
+floro:
+  :id: 106
+  :name: Florø
+floya:
+  :id: 649
+  :name: Fløya
+follo:
+  :id: 695
+  :name: Follo
+forde:
+  :id: 105
+  :name: Førde
+fortuna-alesund:
+  :id: 172
+  :name: Fortuna Ålesund
+fossum:
+  :id: 279
+  :name: Fossum
+fram-larvik:
+  :id: 821
+  :name: Fram Larvik
+fredrikstad:
+  :id: 117
+  :name: Fredrikstad
+freidig:
+  :id: 25221
+  :name: Freidig
+frigg-oslo:
+  :id: 314
+  :name: Frigg Oslo
+fyllingsdalen:
+  :id: 145905
+  :name: Fyllingsdalen
+gimletroll:
+  :id: 29904
+  :name: Gimletroll
+gjovik:
+  :id: 30525
+  :name: Gjøvik
+grand-bodo:
+  :id: 741
+  :name: Grand Bodø
+grand-bodo--2:
+  :id: 155486
+  :name: Grand Bodø
+grorud:
+  :id: 323
+  :name: Grorud
+gvarv:
+  :id: 609
+  :name: Gvarv
+hamkam:
+  :id: 63
+  :name: HamKam
+hardhaus:
+  :id: 28937
+  :name: Hardhaus
+harstad:
+  :id: 567
+  :name: Harstad
+hauerseter:
+  :id: 4122
+  :name: Hauerseter
+haugar:
+  :id: 31417
+  :name: Haugar
+haugesund:
+  :id: 202
+  :name: Haugesund
+herd:
+  :id: 26873
+  :name: Herd
+hodd:
+  :id: 171
+  :name: Hødd
+hodd-damer:
+  :id: 718
+  :name: Hødd (Damer)
+holand:
+  :id: 249
+  :name: Høland
+holmlia:
+  :id: 871
+  :name: Holmlia
+honefoss:
+  :id: 412
+  :name: Hønefoss
+jerv:
+  :id: 259
+  :name: Jerv
+jevnaker:
+  :id: 134431
+  :name: Jevnaker
+jolster:
+  :id: 145951
+  :name: Jølster
+kattem:
+  :id: 166
+  :name: Kattem
+kaupanger:
+  :id: 145952
+  :name: Kaupanger
+kaupanger-il:
+  :id: 506
+  :name: Kaupanger IL
+kfum-oslo:
+  :id: 306
+  :name: KFUM Oslo
+kil-hemne:
+  :id: 733
+  :name: KIL/Hemne
+kjelsas:
+  :id: 278
+  :name: Kjelsås
+klepp:
+  :id: 206
+  :name: Klepp
+kolbotn:
+  :id: 295
+  :name: Kolbotn
+kongsvinger:
+  :id: 5
+  :name: Kongsvinger
+kongsvinger-damer:
+  :id: 10284
+  :name: Kongsvinger (Damer)
+konnerud:
+  :id: 12342
+  :name: Konnerud
+kristiansund:
+  :id: 785
+  :name: Kristiansund
+kvik-halden:
+  :id: 139
+  :name: Kvik Halden
+levanger:
+  :id: 31136
+  :name: Levanger
+lillehammer:
+  :id: 158
+  :name: Lillehammer
+lillehammer-fk:
+  :id: 667
+  :name: Lillehammer FK
+lillestrom:
+  :id: 177
+  :name: Lillestrøm
+linderud-grei:
+  :id: 860
+  :name: Linderud-Grei
+loddefjord:
+  :id: 20576
+  :name: Loddefjord
+lommedalen:
+  :id: 457
+  :name: Lommedalen
+lorenskog:
+  :id: 188
+  :name: Lørenskog
+lsk-kvinner:
+  :id: 698
+  :name: LSK Kvinner
+lyn:
+  :id: 9134
+  :name: Lyn
+lyn-fotball:
+  :id: 3660
+  :name: Lyn  Fotball
+lyngdal:
+  :id: 768
+  :name: Lyngdal
+lyngen-karnes:
+  :id: 648
+  :name: Lyngen/Karnes
+malvik:
+  :id: 120821
+  :name: Malvik
+mandalskameratene:
+  :id: 357
+  :name: Mandalskameratene
+medkila:
+  :id: 569
+  :name: Medkila
+mjolner:
+  :id: 564
+  :name: Mjølner
+mjondalen:
+  :id: 419
+  :name: Mjøndalen
+mo:
+  :id: 133615
+  :name: Mo
+molde:
+  :id: 3
+  :name: Molde
+molde-2:
+  :id: 6
+  :name: Molde 2
+moss:
+  :id: 120
+  :name: Moss
+namsos:
+  :id: 175
+  :name: Namsos
+nardo:
+  :id: 10
+  :name: Nardo
+nesodden:
+  :id: 325
+  :name: Nesodden
+nest-sotra:
+  :id: 800
+  :name: Nest-Sotra
+notodden:
+  :id: 689
+  :name: Notodden
+nybergsund:
+  :id: 67
+  :name: Nybergsund
+nymark:
+  :id: 331
+  :name: Nymark
+odd-grenland:
+  :id: 270
+  :name: Odd Grenland
+odd-grenland-2:
+  :id: 268
+  :name: Odd Grenland 2
+orn-horten:
+  :id: 203
+  :name: Ørn Horten
+os:
+  :id: 123
+  :name: Os
+oslo-city:
+  :id: 342
+  :name: Oslo City
+ostsiden:
+  :id: 291
+  :name: Østsiden
+ottestad:
+  :id: 108
+  :name: Ottestad
+ovrevoll-hosle:
+  :id: 1586
+  :name: Øvrevoll Hosle
+oystese:
+  :id: 19073
+  :name: Øystese
+porsanger:
+  :id: 832
+  :name: Porsanger
+pors-grenland:
+  :id: 82
+  :name: Pors Grenland
+randaberg:
+  :id: 144212
+  :name: Randaberg
+ranheim:
+  :id: 133568
+  :name: Ranheim
+raufoss:
+  :id: 59
+  :name: Raufoss
+raufoss-damer:
+  :id: 120714
+  :name: Raufoss (Damer)
+roa:
+  :id: 360
+  :name: Røa
+roa-damer:
+  :id: 133914
+  :name: Røa (Damer)
+rosenborg:
+  :id: 145
+  :name: Rosenborg
+rosenborg-2:
+  :id: 31140
+  :name: Rosenborg 2
+rosseland:
+  :id: 389
+  :name: Rosseland
+runar:
+  :id: 160
+  :name: Runar
+salangen:
+  :id: 524
+  :name: Salangen
+sandefjord-fotball:
+  :id: 195
+  :name: Sandefjord Fotball
+sandnessjoen:
+  :id: 33712
+  :name: Sandnessjøen
+sandnes-ulf:
+  :id: 350
+  :name: Sandnes Ulf
+sandviken:
+  :id: 471
+  :name: Sandviken
+sarpsborg-08:
+  :id: 797
+  :name: Sarpsborg 08
+sarpsborg-08-damer:
+  :id: 123390
+  :name: Sarpsborg 08 (Damer)
+senja:
+  :id: 646
+  :name: Senja
+skarbovik:
+  :id: 13
+  :name: Skarbøvik
+skarphedin:
+  :id: 36
+  :name: Skarphedin
+skedsmo:
+  :id: 244
+  :name: Skedsmo
+skeid:
+  :id: 276
+  :name: Skeid
+skjetten:
+  :id: 719
+  :name: Skjetten
+sogndal:
+  :id: 107
+  :name: Sogndal
+sola:
+  :id: 743
+  :name: Sola
+solberg:
+  :id: 438
+  :name: Solberg
+spjelkavik:
+  :id: 136
+  :name: Spjelkavik
+sprint-jeloy:
+  :id: 134272
+  :name: Sprint-Jeløy
+staal-jorpeland:
+  :id: 15366
+  :name: Staal Jørpeland
+stabaek:
+  :id: 269
+  :name: Stabæk
+stabaek-2:
+  :id: 273
+  :name: Stabæk 2
+stabaek-damer:
+  :id: 3396
+  :name: Stabæk (Damer)
+start:
+  :id: 261
+  :name: Start
+stavanger:
+  :id: 15200
+  :name: Stavanger
+stjordals-blink:
+  :id: 186
+  :name: Stjørdals-Blink
+strindheim-tf:
+  :id: 133455
+  :name: Strindheim TF
+strommen:
+  :id: 184
+  :name: Strømmen
+stromsgodset:
+  :id: 816
+  :name: Strømsgodset
+stromsgodset-2:
+  :id: 817
+  :name: Strømsgodset 2
+sunndal:
+  :id: 42
+  :name: Sunndal
+sunndal-damer:
+  :id: 33382
+  :name: Sunndal (Damer)
+tiller:
+  :id: 124
+  :name: Tiller
+tornado-maloy:
+  :id: 112
+  :name: Tornado Måløy
+traeff:
+  :id: 39
+  :name: Træff
+traeff-damer:
+  :id: 397
+  :name: Træff (Damer)
+tromsdalen:
+  :id: 647
+  :name: Tromsdalen
+tromsdalen-damer:
+  :id: 122359
+  :name: Tromsdalen (Damer)
+tromso:
+  :id: 2
+  :name: Tromsø
+tromso-2:
+  :id: 526
+  :name: Tromsø 2
+trondheims-orn:
+  :id: 147
+  :name: Trondheims-Ørn
+tverlandet:
+  :id: 145534
+  :name: Tverlandet
+tynset:
+  :id: 815
+  :name: Tynset
+ullensaker-kisa:
+  :id: 153683
+  :name: Ullensaker/Kisa
+uraedd:
+  :id: 20
+  :name: Urædd
+uraedd-damer:
+  :id: 840
+  :name: Urædd (Damer)
+valdres:
+  :id: 766
+  :name: Valdres
+vif:
+  :id: 277
+  :name: Vålerenga
+valerenga-2:
+  :id: 220
+  :name: Vålerenga 2
+valerenga-damer:
+  :id: 379
+  :name: Vålerenga (Damer)
+vard-haugesund:
+  :id: 352
+  :name: Vard Haugesund
+verdal:
+  :id: 168
+  :name: Verdal
+vidar:
+  :id: 353
+  :name: Vidar
+viking:
+  :id: 198
+  :name: Viking
+viking-2:
+  :id: 15558
+  :name: Viking 2
+vindbjart:
+  :id: 443
+  :name: Vindbjart
+volda:
+  :id: 680
+  :name: Volda
+voss:
+  :id: 505
+  :name: Voss
+voss-damer:
+  :id: 335
+  :name: Voss (Damer)

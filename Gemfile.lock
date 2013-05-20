@@ -1,0 +1,68 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.3)
+    coderay (1.0.9)
+    crack (0.3.2)
+    dalli (2.6.3)
+    diff-lcs (1.2.1)
+    faraday (0.8.6)
+      multipart-post (~> 1.1)
+    icalendar (1.3.0)
+    kgio (2.8.0)
+    method_source (0.8.1)
+    multipart-post (1.2.0)
+    newrelic_rpm (3.6.2.96)
+    nokogiri (1.5.6)
+    pry (0.9.12)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rack (1.5.2)
+    rack-protection (1.5.0)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    raindrops (0.11.0)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.0)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.0)
+    sinatra (1.4.2)
+      rack (~> 1.5, >= 1.5.2)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    slim (1.3.9)
+      temple (~> 0.6.3)
+      tilt (~> 1.3, >= 1.3.3)
+    slop (3.4.4)
+    temple (0.6.4)
+    tilt (1.4.1)
+    unicorn (4.6.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    webmock (1.11.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dalli
+  faraday (~> 0.8.6)
+  icalendar (~> 1.3.0)
+  newrelic_rpm
+  nokogiri (~> 1.5.6)
+  pry
+  rack-test
+  rspec
+  sinatra (~> 1.4.0)
+  slim (~> 1.3.9)
+  unicorn
+  webmock
