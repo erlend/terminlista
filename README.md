@@ -1,5 +1,7 @@
 Terminlista
 ===========
+[![Build Status](https://travis-ci.org/erlend/terminlista.png?branch=master)](https://travis-ci.org/erlend/terminlista)
+
 Creates and hosts iCalendar files for Norwegian football teams.
 
 Getting started
