@@ -5,6 +5,7 @@ class Team
   include Icalendar
   ALL = YAML.load open('config/teams.yml')
   URL = 'http://www.fotball.no/Community/Lag/Hjem/'
+  ONE_DAY = 24*60*60
 
   def self.[] short_name
     new ALL[short_name][:id]
@@ -55,7 +56,7 @@ class Team
   end
 
   def web_page
-    @web_page ||= cache.fetch "team:#{@id}:page" do
+    @web_page ||= cache.fetch "team:#{@id}:page", ONE_DAY do
       Faraday.get(URL, fiksId: @id)
     end
   end
