@@ -35,7 +35,7 @@ asker:
   :id: 712
   :name: Asker
 askim:
-  :id: 1
+  :id: 3600
   :name: Askim
 austevoll:
   :id: 515
@@ -116,7 +116,7 @@ fart:
   :id: 452
   :name: Fart
 finnsnes:
-  :id: 643
+  :id: 34929
   :name: Finnsnes
 fk-tonsberg:
   :id: 730
@@ -167,11 +167,11 @@ gjovik:
   :id: 30525
   :name: Gjøvik
 grand-bodo:
-  :id: 741
+  :id: 25531
   :name: Grand Bodø
-grand-bodo--2:
+grand-bodo-kvinner:
   :id: 155486
-  :name: Grand Bodø
+  :name: Grand Bodø Kvinner
 grorud:
   :id: 323
   :name: Grorud
@@ -419,7 +419,7 @@ sandefjord-fotball:
   :id: 195
   :name: Sandefjord Fotball
 sandnessjoen:
-  :id: 33712
+  :id: 636
   :name: Sandnessjøen
 sandnes-ulf:
   :id: 350
