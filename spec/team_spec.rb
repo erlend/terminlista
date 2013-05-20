@@ -2,10 +2,6 @@ require 'spec_helper'
 
 describe Team do
   let(:team) { Team.new 277 }
-  before do
-    stub_request(:get, "www.fotball.no/Community/Lag/Hjem/?fiksId=277").
-      to_return status: 200, body: File.new('spec/fixtures/vif.html')
-  end
 
   describe '.[]' do
     it 'locates team from short name' do
