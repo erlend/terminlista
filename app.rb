@@ -24,3 +24,41 @@ get '/:short_name.?:format?' do |short_name, format|
     raise Sinatra::NotFound
   end
 end
+
+__END__
+@@ layout
+doctype html
+html lang='no'
+  head
+    meta charset='utf-8'
+    title Terminlista
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    meta name='description' content='Kalendere for norske fotball-lag'
+    meta name='author' content='Erlend Finvåg'
+    link rel='stylesheet' href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    /[if lt IE 9]
+      script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'
+    css:
+      .container { max-width: 724px; }
+  body
+    a href="https://github.com/erlend/terminlista"
+      img[style="position: absolute; top: 0; right: 0; border: 0;"
+          src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+          alt="Fork me on GitHub"]
+    .container
+      .page-header : h1
+        ' Terminlista
+        small Kalendere for norske fotball lag
+      == yield
+
+@@ index
+table.table.table-bordered.table-striped
+  tbody
+    - @teams.each do |team|
+      tr id="#{team.short}" itemtype='http://schema.org/SportsTeam'
+        td itemtprop='name' width='100%' = team.name
+        td.text-right
+          a.btn.btn-success.btn-xs href=webcal_for(team.short)
+            span.glyphicon.glyphicon-calendar
+            '
+            ' iCal
