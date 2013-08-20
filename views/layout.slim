@@ -7,7 +7,7 @@ html lang='no'
     meta name='description' content='Kalendere for norske fotball-lag'
     meta name='author' content='Erlend Finvåg'
     meta name='robots' content='index, nofollow'
-    link rel='stylesheet' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'
+    link rel='stylesheet' href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
     /[if lt IE 9]
       script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'
     css:
@@ -18,8 +18,7 @@ html lang='no'
           src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
           alt="Fork me on GitHub"]
     .container
-      .page-header
-        h1
-          ' Terminlista
-          span.lead Kalendere for norske fotball lag
+      .page-header : h1
+        ' Terminlista
+        small Kalendere for norske fotball lag
       == yield
