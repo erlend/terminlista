@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe Team do
-  let(:team) { Team.new 277 }
+  let(:team) { Team.new 'vif', id: 277 }
 
-  describe '.[]' do
+  describe 'self.[]' do
     it 'locates team from short name' do
-      expect(Team['vif'].name).to eq team.name
+      expect(Team['vif'].id).to eq team.id
     end
   end
 
-  describe '#name' do
+  describe 'name' do
     it 'returns name' do
       expect(team.name).to eq 'Vålerenga Menn Senior A'
     end

@@ -11,12 +11,16 @@ helpers do
 end
 
 get '/' do
+  @teams = Team.all
   slim :index
 end
 
 get '/:short_name.?:format?' do |short_name, format|
   @team = Team[short_name]
-
-  content_type 'text/calendar'
-  @team.to_ical
+  if @team
+    content_type 'text/calendar'
+    @team.to_ical
+  else
+    raise Sinatra::NotFound
+  end
 end

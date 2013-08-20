@@ -3,24 +3,39 @@ require_relative 'match'
 
 class Team
   include Icalendar
-  ALL = YAML.load open('config/teams.yml')
   URL = 'http://www.fotball.no/Community/Lag/Hjem/'
   ONE_DAY = 24*60*60
 
-  def self.[] short_name
-    new ALL[short_name][:id]
+  class <<self
+    def all
+      $all_teams ||= teams_yaml.map do |short, team|
+        new(short, team)
+      end
+    end
+
+    def [] short
+      all.find { |team| team.short == short }
+    end
+
+    private
+    def teams_yaml
+      File.open('config/teams.yml') { |file| YAML.load(file) }
+    end
   end
 
-  def initialize id
-    @id = id
+  attr_reader :id, :short, :name
+
+  def initialize(short, team)
+    @short = short
+    @id, @name = team.values_at(:id, :name)
   end
 
   def name
-    document.at_xpath('//h1').text.strip
+    @name ||= document.at_xpath('//h1').text.strip
   end
 
   def url
-    "http://www.fotball.no/Community/Lag/Hjem/?fiksId=#{@id}"
+    "http://www.fotball.no/Community/Lag/Hjem/?fiksId=#{id}"
   end
 
   def matches
@@ -51,13 +66,13 @@ class Team
 
   private
   def document
-    raise "Could not download page for id #{@id}" if web_page.status != 200
+    raise "Could not download page for id #{id}" if web_page.status != 200
     @document ||= Nokogiri::HTML web_page.body
   end
 
   def web_page
-    @web_page ||= cache.fetch "team:#{@id}:page", ONE_DAY do
-      Faraday.get(URL, fiksId: @id)
+    @web_page ||= cache.fetch "team:#{id}:page", ONE_DAY do
+      Faraday.get(URL, fiksId: id)
     end
   end
 
