@@ -8,6 +8,7 @@ gem 'icalendar',    '~> 1.3.0'
 gem 'slim',         '~> 1.3.9'
 gem 'dalli'
 gem 'unicorn'
+gem 'xml-sitemap',  '~> 1.3.2'
 gem 'newrelic_rpm'
 gem 'pry', require: false
 

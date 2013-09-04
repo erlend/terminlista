@@ -15,6 +15,16 @@ get '/' do
   slim :index
 end
 
+get '/sitemap.xml' do
+  content_type 'text/xml'
+  XmlSitemap::Map.new('terminlista.com') do |m|
+    m.add('/', period: :yearly)
+    Team.all.each do |team|
+      m.add("/#{team.short}.ics", period: :weekly)
+    end
+  end.render
+end
+
 get '/:short_name.?:format?' do |short_name, format|
   @team = Team[short_name]
   if @team
