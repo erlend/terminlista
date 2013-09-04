@@ -1,6 +1,13 @@
 language: ruby
 rvm:
-  - '2.0.0'
+- 2.0.0
 script: bundle exec rspec spec
 services:
-  - memcached
+- memcached
+deploy:
+  provider: heroku
+  api_key:
+    secure: GZhO/xFyQ1kA0hceYbg5mtIiiGhnuTAG2cvBULtAWdv0IoDf+DqHCUO424+sKMDai2xT75UI78GEAZEwuN89+1DQfYWLcdKNpIhWvy3E/DnFwfAJP4i9QbzyRZ9sXz4dU9ydjqiaL43Hx7EodJ3KVWFzL353uhHcGFeiUvJOlkw=
+  app: terminlista
+  on:
+    repo: erlend/terminlista
