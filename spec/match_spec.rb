@@ -8,7 +8,7 @@ describe Match do
 
   describe '#home_team' do
     it 'returns home team name' do
-      expect(played_match.home_team).to eq 'Brann'
+      expect(played_match.home_team).to eq 'Molde'
     end
   end
 
@@ -20,13 +20,13 @@ describe Match do
 
   describe '#teams' do
     it 'returns team names' do
-      expect(played_match.teams).to eq 'Brann - Vålerenga'
+      expect(played_match.teams).to eq 'Molde - Vålerenga'
     end
   end
 
   describe '#kick_off_at' do
     it 'returns the match date and time' do
-      expect(played_match.kick_off_at).to eq DateTime.new 2013, 03, 16, 18
+      expect(played_match.kick_off_at).to eq DateTime.new 2014, 03, 28, 19
     end
   end
 
@@ -36,7 +36,7 @@ describe Match do
     end
 
     it 'returns result if match is played' do
-      expect(played_match.result).to eq '3 - 1'
+      expect(played_match.result).to eq '2 - 0'
     end
   end
 
@@ -58,11 +58,11 @@ describe Match do
 
   describe '#title' do
     it 'returns teams and result if played' do
-      expect(played_match.title).to eq 'Brann - Vålerenga (3 - 1)'
+      expect(played_match.title).to eq 'Molde - Vålerenga (2 - 0)'
     end
 
     it 'returns only teams if unplayed' do
-      expect(unplayed_match.title).to eq 'Vålerenga - Sandnes Ulf'
+      expect(unplayed_match.title).to eq 'Vålerenga - Start'
     end
   end
 end

@@ -5,11 +5,11 @@ class Match
   end
 
   def home_team
-    @columns[3].text
+    column_contents(3)
   end
 
   def away_team
-    @columns[5].text
+    column_contents(5)
   end
 
   def teams
@@ -17,17 +17,17 @@ class Match
   end
 
   def kick_off_at
-    DateTime.strptime("#{@columns[0].text[/[\d\.]+/, 0]} #{@columns[2].text}",
+    DateTime.strptime("#{column_contents(0)[/[\d\.]+/, 0]} #{column_contents(2)}",
                       '%d.%m.%Y %H:%M')
   end
 
   def result
     return unless played?
-    @columns[4].text.gsub(':', '-')
+    column_contents(4).gsub(':', '-')
   end
 
   def played?
-    @columns[4].text =~ /\d/
+    column_contents(4) =~ /\d/
   end
 
   def unplayed?
@@ -35,11 +35,16 @@ class Match
   end
 
   def location
-    @columns[6].text
+    column_contents(6)
   end
 
   def title
     return teams if unplayed?
     "#{teams} (#{result})"
+  end
+
+  private
+  def column_contents(column_number)
+    @columns[column_number].text.strip
   end
 end

@@ -2,19 +2,18 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html id="ctl00_HtmlElement" xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <!-- Add fancyBox -->
-    <link rel="stylesheet" href="/Templates/Portal/Styles/fancybox/jquery.fancybox.css?v=2.0.5" type="text/css" media="screen" />
-    <script type="text/javascript" src="/Templates/Portal/Styles/fancybox/jquery.fancybox.pack.js?v=2.0.5"></script>
-    <script type="text/javascript" src="/Templates/portal/js/overlay.js"></script>
-    <script type="text/javascript" src="/Templates/portal/js/toolbox.expose.js"></script>
-    <script type="text/javascript">if (typeof (EPi) == "undefined") { var EPi = {}; }</script>
-    <script type="text/javascript" src="/Templates/portal/js/jquery.tools.min.js"></script>
-    <script type="text/javascript" src="/Templates/portal/js/jquery.tablesorter.min.js"></script> 
-    <title>
+<head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-3.newrelic.com","errorBeacon":"jserror.newrelic.com","licenseKey":"18083db3e4","applicationID":"2425622","transactionName":"NVFbNhRVWEtTBxYPXgwbeDE2G0JdXxQOB0UHRxYQA1hXTFcUDhNCTURYBQNHGUxXBQ8OXg9RFwMVRE4=","queueTime":0,"applicationTime":991,"ttGuid":"17970C4A1F01B767","agent":"js-agent.newrelic.com/nr-378.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwUAV1BXGwEEVlRUBQM="};window.NREUM||(NREUM={}),__nr_require=function t(e,n,r){function o(i){if(!n[i]){var a=n[i]={exports:{}};e[i][0].call(a.exports,function(t){var n=e[i][1][t];return o(n?n:t)},a,a.exports,t,e,n,r)}return n[i].exports}for(var i=0;i<r.length;i++)o(r[i]);return o}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=i[t],o=r&&r.length||0,s=n[a]||(n[a]={}),d=0;o>d;d++)r[d].apply(s,e);return s}function r(t,e){var n=i[t]||(i[t]=[]);n.push(e)}function o(t){return delete t[a]}var i={},a="nr@context";e.exports={on:r,emit:n,clear:o}},{}],2:[function(t){function e(t,e,o,a,d){return s?s-=1:n("err",[d||new UncaughtException(t,e,o)]),"function"==typeof i?i.apply(this,r(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}var n=t("handle"),r=t(6),o=t(5),i=window.onerror,a=!1,s=0;t("loader").features.push("err"),window.onerror=e;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),a=!0)}o.on("fn-start",function(){a&&(s+=1)}),o.on("fn-err",function(t,e,r){a&&(this.thrown=!0,n("err",[r,(new Date).getTime()]))}),o.on("fn-end",function(){a&&!this.thrown&&s>0&&(s-=1)})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){n.inPlace(this,i,"fn-")}var n=t(1),r=t(2),o=window.XMLHttpRequest,i=["onload","onerror","onabort","onloadstart","onloadend","onprogress","onreadystatechange","ontimeout"];window.XMLHttpRequest=function(t){var i=new o(t);return r.emit("new-xhr",[],i),n.inPlace(i,["addEventListener","removeEventListener"],"-",function(t,e){return e}),i.addEventListener("readystatechange",e,!1),i},window.XMLHttpRequest.prototype=o.prototype},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;p>o;o++)t.removeEventListener(u[o],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,s="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,d=e(s);if(d&&(r.rxSize=d),this.sameOrigin){var f=t.getResponseHeader("X-NewRelic-App-Data");f&&(n.cat=f.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,i("xhr",[n,r])}}}function r(t,e){var n=a(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}function o(t,e){return e}t("loader").features.push("xhr");var i=t("handle"),a=t(1),s=t(5),d=t(6),u=["load","error","abort","timeout"],p=u.length,f=t(2);t(3),t(4),d.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),s.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),d.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),d.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var a=e(o);a&&(r.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){}};for(var s=0;p>s;s++)n.addEventListener(u[s],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:15,6:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=c.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID){c.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=d.createElement("script");e.src=c.proto+t.agent,d.body.appendChild(e)}}function r(){"complete"===d.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,d=s.document,u="addEventListener",p="attachEvent",f=(""+location).split("?")[0],c=e.exports={offset:i(),origin:f,features:[]};d[u]?(d[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(d[p]("onreadystatechange",r),s[p]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,n,r){function nrWrapper(){try{var a,s=i(arguments),d=this,u=n&&n(s,d)||{};o.emit(e+"start",[s,d,r],u)}catch(p){}try{return a=t.apply(d,s)}catch(f){try{o.emit(e+"err",[s,d,f],u)}catch(p){}throw f}finally{try{o.emit(e+"end",[s,d,a],u)}catch(p){}}}return t&&"function"==typeof t&&t.apply&&!t._wrapped?(e||(e=""),nrWrapper._wrapped=!0,nrWrapper):t}function r(t,e,r,o){r||(r="");var i,a,s,d="-"===r.charAt(0);for(s=0;s<e.length;s++)a=e[s],i=t[a],i&&"function"==typeof i&&i.apply&&!i._wrapped&&(t[a]=n(i,d?a+r:r,o,a,t))}var o=t(1),i=t(2);e.exports=n,n.inPlace=r},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script><link rel="stylesheet" type="text/css" media="all" href="/Templates/portal/Styles/combinedall_09AFB3FA46446C24387B0B3528C3400F.css" /><link rel="stylesheet" type="text/css" media="screen" href="/Templates/portal/Styles/combinedscreen_7A39D6DBC8E74202201006EAE92ABEDB.css" /><link rel="stylesheet" type="text/css" media="print" href="/Templates/portal/Styles/combinedprint_7646B15A7AAE4EF2EDA4035D2FC56869.css" />
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        (window.jQuery) || document.write('<script type="text/javascript" src="../../portal/js/jquery-1.7.1.min.js"><\/script>');//]]>
+    </script>
+    
+
+    <script type="text/javascript" src="/Templates/portal/js/combinedtop_6E4A9D3D0B72637BF8854933B3355B61.js"></script><script type="text/javascript" id="Epinova.EmailObfuscator" src="/Templates/portal/js/eob.js?r=824897DB9B1864FFBAF7624A2FA67D98"></script><title>
 	Vålerenga Menn Senior A - fotball.no - Norges Fotballforbund
-</title><link rel="stylesheet" type="text/css" href="/Templates/portal/Styles/screen.css" media="all" /><link rel="stylesheet" type="text/css" href="/Templates/portal/Styles/print.css" media="print" />
+</title>
 	<!--[if IE 6]>
 		<link rel="stylesheet" type="text/css" href="/Templates/portal/Styles/ie6.css" />
 	<![endif]-->
@@ -25,23 +24,11 @@
 <body class="communityBody">
     <form name="aspnetForm" method="post" action="/Community/Lag/Hjem/?fiksId=277" id="aspnetForm" enctype="multipart/form-data">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEzMjE5MTE1NA9kFgJmD2QWAgIBD2QWBAIBEGRkFgICCQ8WAh4EVGV4dGVkAgMQZGQWFgIDD2QWBAIBDxYCHgVjbGFzcwUIc2VsZWN0ZWQWAmYPDxYCHgtOYXZpZ2F0ZVVybAUjL2RlZmF1bHQuYXNweD9pZD0yMTYmZXBzbGFuZ3VhZ2U9ZW5kZAIDDxYCHwFlFgJmDw8WAh8CBStodHRwczovL3d3dy5mb3RiYWxsLm5vLy9Db21tdW5pdHkvTWluLXNpZGUvZGQCBQ9kFgRmD2QWAgIBDxYCHwAFQjxhIGhyZWY9Imh0dHBzOi8vd3d3LmZvdGJhbGwubm8vL0NvbW11bml0eS9NaW4tc2lkZS8iPkxvZ2cgaW5uPC9hPmQCAg8PZBYCHgVzdHlsZQUNZGlzcGxheTpub25lO2QCBw9kFgJmDxYCHgtfIUl0ZW1Db3VudAIEFggCAQ9kFgICAQ8PFgQfAgU9L3RlbXBsYXRlcy9wb3J0YWwvcGFnZXMvdG9waWNwYWdlLmFzcHg/aWQ9MzAxNCZlcHNsYW5ndWFnZT1lbh8ABQlCSUxMRVRURVJkZAICD2QWAgIBDw8WBh8CBR1odHRwOi8vbmV0dGJ1dGlray5mb3RiYWxsLm5vLx8ABQpORVRUQlVUSUtLHgZUYXJnZXQFBl9ibGFua2RkAgMPZBYCAgEPDxYEHwIFPS90ZW1wbGF0ZXMvcG9ydGFsL3BhZ2VzL3RvcGljcGFnZS5hc3B4P2lkPTE5NzUmZXBzbGFuZ3VhZ2U9ZW4fAAUGT00gTkZGZGQCBA9kFgICAQ8PFgYfAgUdaHR0cDovL2Vrc3RyYW5ldHQuZm90YmFsbC5uby8fAAUKRUtTVFJBTkVUVB8FBQZfYmxhbmtkZAIJD2QWAgIFDw8WAh8ABQRTw7hrZGQCCw9kFgRmD2QWBgIBDxYCHglfUGFnZUxpbmsoKWxFUGlTZXJ2ZXIuQ29yZS5QYWdlUmVmZXJlbmNlLCBFUGlTZXJ2ZXIsIFZlcnNpb249Ni4xLjM3OS4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPThmZTgzZGVhNzM4YjQ1YjcDMjE2ZAIDDw8WAh8CBUkvdGVtcGxhdGVzL3BvcnRhbC9wYWdlcy9uYXZpZ2F0b3J1bml0c3Jlc3VsdHMuYXNweD9pZD0yODczJmVwc2xhbmd1YWdlPWVuZBYCAgMPDxYCHwAFIEtsdWJiZXIsIGxhZywgcGVyc29uZXIgb2cgYW5sZWdnZGQCBQ8PFgIfAgVKL3RlbXBsYXRlcy9wb3J0YWwvcGFnZXMvbmF2aWdhdG9yZml4dHVyZXNmcm9udC5hc3B4P2lkPTI4NzImZXBzbGFuZ3VhZ2U9ZW5kFgICAw8PFgIfAAUYVGVybWlubGlzdGVyIG9nIHRhYmVsbGVyZGQCAg8PFgIeB1Zpc2libGVoZBYEAgEPDxYCHwIFPi9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9NeVBhZ2UuYXNweD9pZD0yNjU4JmVwc2xhbmd1YWdlPWVuZGQCAw8PFgIfAgVJL3RlbXBsYXRlcy9wb3J0YWwvcGFnZXMvbmF2aWdhdG9ydW5pdHNyZXN1bHRzLmFzcHg/aWQ9NjAwMyZlcHNsYW5ndWFnZT1lbmRkAg0PZBYCAgEPZBYCZg8WAh8ABRhWw6VsZXJlbmdhIE1lbm4gU2VuaW9yIEFkAg8PFgIfBigrBAQyNjkyFg4CAQ9kFgICAQ9kFgICAQ8WAh4EaHJlZgVNL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL1RlYW1Ib21lLmFzcHg/aWQ9MjY4MiZlcHNsYW5ndWFnZT1lbiZjbHViSWQ9MTEyMDcWAgIBDw8WBh4LX2lzRWRpdGFibGVoHg5fYm91bmRQYWdlTGluawL6FB4JX2xhc3RUeXBlBQdEZWZhdWx0ZGQCAg9kFgICAQ9kFgICAQ8WAh8IBU0vVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvVGVhbUJsb2cuYXNweD9pZD0yNjg0JmVwc2xhbmd1YWdlPWVuJmNsdWJJZD0xMTIwNxYCAgEPDxYGHwloHwoC/BQfCwUHRGVmYXVsdGRkAgMPZBYCAgEPZBYCAgEPFgIfCAVRL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL1RlYW1DYWxlbmRhci5hc3B4P2lkPTM2NTcmZXBzbGFuZ3VhZ2U9ZW4mY2x1YklkPTExMjA3FgICAQ8PFgYfCWgfCgLJHB8LBQdEZWZhdWx0ZGQCBA9kFgICAQ8WAh8HaBYCAgEPFgIfCAVaL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL1RlYW1NZW1iZXJzTWFuYWdlbWVudC5hc3B4P2lkPTMxMjUmZXBzbGFuZ3VhZ2U9ZW4mY2x1YklkPTExMjA3FgICAQ8PFgYfCWgfCgK1GB8LBQdEZWZhdWx0ZGQCBQ9kFgICAQ9kFgICAQ8WAh8IBVQvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvVGVhbVRvcFNjb3JlcnMuYXNweD9pZD0yMjc5NSZlcHNsYW5ndWFnZT1lbiZjbHViSWQ9MTEyMDcWAgIBDw8WBh8JaB8KAouyAR8LBQdEZWZhdWx0ZGQCBg9kFgICAQ9kFgICAQ8WAh8IBVQvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvVGVhbU1lbWJlcnNFUFMuYXNweD9pZD0yMjc5NyZlcHNsYW5ndWFnZT1lbiZjbHViSWQ9MTEyMDcWAgIBDw8WBh8JaB8KAo2yAR8LBQdEZWZhdWx0ZGQCBw9kFgICAQ9kFgICAQ8WAh8IBVYvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvVGVhbVBlbmFsdHlDYXJkcy5hc3B4P2lkPTIyNzk4JmVwc2xhbmd1YWdlPWVuJmNsdWJJZD0xMTIwNxYCAgEPDxYGHwloHwoCjrIBHwsFB0RlZmF1bHRkZAIRD2QWAgIBDw8WAh8HZ2RkAhMPZBYEAgEPZBYEAgEPZBYCAgEPZBYCZg8WAh8EAgoWFAIBD2QWCAIBDxYCHwAFDUtvbnRha3RwZXJzb25kAgMPDxYEHwAFEVN0ZWluIEVybGVuZCBIb2ZmHwIFSC9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9NeVB1YmxpY1Byb2ZpbGUuYXNweD9pZD0xNDU5MSZmaWtzSWQ9MTg1OTg2N2RkAgQPFgIfAAUuLCA8YSBocmVmPSdtYWlsdG86aG9mZkB2aWYubm8nPmhvZmZAdmlmLm5vPC9hPmQCBQ8WAh8ABQosIDQxMDA0NDQ4ZAICD2QWCAIBDxYCHwAFDUtvbnRha3RwZXJzb25kAgMPDxYEHwAFCkxhc3NlIEhvbG0fAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0xODYwMzg1ZGQCBA8WAh8ABTAsIDxhIGhyZWY9J21haWx0bzpsYXNzZUB2aWYubm8nPmxhc3NlQHZpZi5ubzwvYT5kAgUPFgIfAAUKLCA5NTk1OTUzN2QCAw9kFggCAQ8WAh8ABQZUcmVuZXJkAgMPDxYEHwAFE0tqZXRpbCBBbmRyZSBSZWtkYWwfAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0xODc3NzU2ZGQCBA8WAh8AZWQCBQ8WAh8AZWQCBA9kFggCAQ8WAh8ABQpBc3MudHJlbmVyZAIDDw8WBB8ABR5LYXppbWllcnogU3RhbmlzbGF3IFNva29sb3dza2kfAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0xODk2MzU2ZGQCBA8WAh8AZWQCBQ8WAh8ABQosIDkwNzUwODcxZAIFD2QWCAIBDxYCHwAFCkFzcy50cmVuZXJkAgMPDxYEHwAFE01pY2hhZWwgU2NoasO4bmJlcmcfAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0yODU2MTI4ZGQCBA8WAh8ABTQsIDxhIGhyZWY9J21haWx0bzptaWNoYWVsQHZpZi5ubyc+bWljaGFlbEB2aWYubm88L2E+ZAIFDxYCHwBlZAIGD2QWCAIBDxYCHwAFDEtlZXBlcnRyZW5lcmQCAw8PFgQfAAUPR2plcm11bmQgw5hzdGJ5HwIFSC9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9NeVB1YmxpY1Byb2ZpbGUuYXNweD9pZD0xNDU5MSZmaWtzSWQ9MTkxNzQyN2RkAgQPFgIfAAU6LCA8YSBocmVmPSdtYWlsdG86Z2plcm1vZUBvbmxpbmUubm8nPmdqZXJtb2VAb25saW5lLm5vPC9hPmQCBQ8WAh8ABQosIDk1OTU5NTM2ZAIHD2QWCAIBDxYCHwAFEU1hdGVyaWFsZm9ydmFsdGVyZAIDDw8WBB8ABRNQw6VsIEEuIEVuZ2VicmV0c2VuHwIFSC9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9NeVB1YmxpY1Byb2ZpbGUuYXNweD9pZD0xNDU5MSZmaWtzSWQ9MTg2Mjg2MmRkAgQPFgIfAGVkAgUPFgIfAGVkAggPZBYIAgEPFgIfAAUNRnlzaW90ZXJhcGV1dGQCAw8PFgQfAAUNRWlyaWsgQmrDpnJrZR8CBUgvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvTXlQdWJsaWNQcm9maWxlLmFzcHg/aWQ9MTQ1OTEmZmlrc0lkPTE5MDE4ODVkZAIEDxYCHwAFRCwgPGEgaHJlZj0nbWFpbHRvOmVpcmlrYmplcmtlNzhAeWFob28ubm8nPmVpcmlrYmplcmtlNzhAeWFob28ubm88L2E+ZAIFDxYCHwAFCiwgNDY0NjQ5NDJkAgkPZBYIAgEPFgIfAAUNRnlzaW90ZXJhcGV1dGQCAw8PFgQfAAUMUm95IEpvbmFzc2VuHwIFSC9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9NeVB1YmxpY1Byb2ZpbGUuYXNweD9pZD0xNDU5MSZmaWtzSWQ9Mjc0MzY2NmRkAgQPFgIfAGVkAgUPFgIfAGVkAgoPZBYIAgEPFgIfAAUETGVnZWQCAw8PFgQfAAUORmlubiBTdHJla2VydWQfAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0yNjg1MjkzZGQCBA8WAh8AZWQCBQ8WAh8AZWQCAw9kFgICAQ9kFgICCA8WAh8EAgIWBAIBD2QWAgIDDw8WBB8ABQtUaXBwZWxpZ2Flbh8CBUUvdGVtcGxhdGVzL3BvcnRhbC9wYWdlcy9UYWJsZVBhZ2VFUFMuYXNweD9pZD0zMDE4JnRvdXJuYW1lbnRJZD0xMzQzNjVkZAICD2QWAgIDDw8WBB8ABRxOTSBNZW5uIOKAkyBvcmRpbsOmcmUgcnVuZGVyHwIFRS90ZW1wbGF0ZXMvcG9ydGFsL3BhZ2VzL1RhYmxlUGFnZUVQUy5hc3B4P2lkPTMwMTgmdG91cm5hbWVudElkPTEzNTY3NGRkAgMPZBYCAgEPZBYIAgEPDxYEHghJbWFnZVVybAVJL0VQaVNlcnZlckNvbW11bml0eS9Nb2R1bGVzL0ltYWdlR2FsbGVyeS9UaHVtYm5haWxzLzExLzIxMTEvMTYyN180MDY5LmpwZx4NQWx0ZXJuYXRlVGV4dAUYVsOlbGVyZW5nYSBNZW5uIFNlbmlvciBBZGQCBQ9kFgICAQ8PFgQfAAUSVsOlbGVyZW5nYSBGb3RiYWxsHwIFPC9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9DbHViSG9tZS5hc3B4P2lkPTI2NzEmZmlrc0lkPTIzM2RkAgcPDxYEHwAFEU9zbG8gRm90YmFsbGtyZXRzHwIFPy90ZW1wbGF0ZXMvcG9ydGFsL3BhZ2VzL2Rpc3RyaWN0cGFnZS5hc3B4P2lkPTY1OCZlcHNsYW5ndWFnZT1lbmRkAgkPZBYCAgEPDxYCHwIFIWh0dHA6Ly9odHRwOi8vd3d3LnZpZi1mb3RiYWxsLm5vL2RkAhUPZBYCZg8WAh4JX3BhZ2VMaW5rKCsEBDUyMDkWBGYPZBYCZg8VARdORkZzIHNhbWFyYmVpZHNwYXJ0bmVyZWQCAQ9kFgJmDxUDAAA0L0dsb2JhbC9BbHRlcm5hdGl2ZV9idW5uYmFubmVyZS90b21fbGluamVfOTYweDY0LmpwZ2QCGQ8WAh4JaW5uZXJodG1sBQ9ORkYtRk8tQ08tV0VCMDNkGAEFFmN0bDAwJEFkc0xpc3QxJEFkc0xpc3QPD2ZkZMjtcpTyhV6Eaq/wtDGeBQ0lLPGF" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEzMjE5MTE1NA9kFgJmD2QWAgIBD2QWCAIBEGRkFghmDxYCHgRUZXh0BdRJPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPndpbmRvdy5OUkVVTXx8KE5SRVVNPXt9KTtOUkVVTS5pbmZvID0geyJiZWFjb24iOiJiZWFjb24tMy5uZXdyZWxpYy5jb20iLCJlcnJvckJlYWNvbiI6ImpzZXJyb3IubmV3cmVsaWMuY29tIiwibGljZW5zZUtleSI6IjE4MDgzZGIzZTQiLCJhcHBsaWNhdGlvbklEIjoiMjQyNTYyMiIsInRyYW5zYWN0aW9uTmFtZSI6Ik5WRmJOaFJWV0V0VEJ4WVBYZ3diZURFMkcwSmRYeFFPQjBVSFJ4WVFBMWhYVEZjVURoTkNUVVJZQlFOSEdVeFhCUThPWGc5UkZ3TVZSRTQ9IiwicXVldWVUaW1lIjowLCJhcHBsaWNhdGlvblRpbWUiOjk5MSwidHRHdWlkIjoiMTc5NzBDNEExRjAxQjc2NyIsImFnZW50IjoianMtYWdlbnQubmV3cmVsaWMuY29tL25yLTM3OC5taW4uanMifTwvc2NyaXB0PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4od2luZG93Lk5SRVVNfHwoTlJFVU09e30pKS5sb2FkZXJfY29uZmlnPXt4cGlkOiJWd1VBVjFCWEd3RUVWbFJVQlFNPSJ9O3dpbmRvdy5OUkVVTXx8KE5SRVVNPXt9KSxfX25yX3JlcXVpcmU9ZnVuY3Rpb24gdChlLG4scil7ZnVuY3Rpb24gbyhpKXtpZighbltpXSl7dmFyIGE9bltpXT17ZXhwb3J0czp7fX07ZVtpXVswXS5jYWxsKGEuZXhwb3J0cyxmdW5jdGlvbih0KXt2YXIgbj1lW2ldWzFdW3RdO3JldHVybiBvKG4/bjp0KX0sYSxhLmV4cG9ydHMsdCxlLG4scil9cmV0dXJuIG5baV0uZXhwb3J0c31mb3IodmFyIGk9MDtpPHIubGVuZ3RoO2krKylvKHJbaV0pO3JldHVybiBvfSh7MTpbZnVuY3Rpb24odCxlKXtmdW5jdGlvbiBuKHQsZSxuKXtufHwobj17fSk7Zm9yKHZhciByPWlbdF0sbz1yJiZyLmxlbmd0aHx8MCxzPW5bYV18fChuW2FdPXt9KSxkPTA7bz5kO2QrKylyW2RdLmFwcGx5KHMsZSk7cmV0dXJuIHN9ZnVuY3Rpb24gcih0LGUpe3ZhciBuPWlbdF18fChpW3RdPVtdKTtuLnB1c2goZSl9ZnVuY3Rpb24gbyh0KXtyZXR1cm4gZGVsZXRlIHRbYV19dmFyIGk9e30sYT0ibnJAY29udGV4dCI7ZS5leHBvcnRzPXtvbjpyLGVtaXQ6bixjbGVhcjpvfX0se31dLDI6W2Z1bmN0aW9uKHQpe2Z1bmN0aW9uIGUodCxlLG8sYSxkKXtyZXR1cm4gcz9zLT0xOm4oImVyciIsW2R8fG5ldyBVbmNhdWdodEV4Y2VwdGlvbih0LGUsbyldKSwiZnVuY3Rpb24iPT10eXBlb2YgaT9pLmFwcGx5KHRoaXMscihhcmd1bWVudHMpKTohMX1mdW5jdGlvbiBVbmNhdWdodEV4Y2VwdGlvbih0LGUsbil7dGhpcy5tZXNzYWdlPXR8fCJVbmNhdWdodCBlcnJvciB3aXRoIG5vIGFkZGl0aW9uYWwgaW5mb3JtYXRpb24iLHRoaXMuc291cmNlVVJMPWUsdGhpcy5saW5lPW59dmFyIG49dCgiaGFuZGxlIikscj10KDYpLG89dCg1KSxpPXdpbmRvdy5vbmVycm9yLGE9ITEscz0wO3QoImxvYWRlciIpLmZlYXR1cmVzLnB1c2goImVyciIpLHdpbmRvdy5vbmVycm9yPWU7dHJ5e3Rocm93IG5ldyBFcnJvcn1jYXRjaChkKXsic3RhY2siaW4gZCYmKHQoMSksdCgyKSwiYWRkRXZlbnRMaXN0ZW5lciJpbiB3aW5kb3cmJnQoMyksd2luZG93LlhNTEh0dHBSZXF1ZXN0JiZYTUxIdHRwUmVxdWVzdC5wcm90b3R5cGUmJlhNTEh0dHBSZXF1ZXN0LnByb3RvdHlwZS5hZGRFdmVudExpc3RlbmVyJiZ0KDQpLGE9ITApfW8ub24oImZuLXN0YXJ0IixmdW5jdGlvbigpe2EmJihzKz0xKX0pLG8ub24oImZuLWVyciIsZnVuY3Rpb24odCxlLHIpe2EmJih0aGlzLnRocm93bj0hMCxuKCJlcnIiLFtyLChuZXcgRGF0ZSkuZ2V0VGltZSgpXSkpfSksby5vbigiZm4tZW5kIixmdW5jdGlvbigpe2EmJiF0aGlzLnRocm93biYmcz4wJiYocy09MSl9KX0sezE6NSwyOjQsMzozLDQ6Niw1OjEsNjoxNCxoYW5kbGU6IkQ1RHVMUCIsbG9hZGVyOiJHOXowQmwifV0sMzpbZnVuY3Rpb24odCl7ZnVuY3Rpb24gZSh0KXtyLmluUGxhY2UodCxbImFkZEV2ZW50TGlzdGVuZXIiLCJyZW1vdmVFdmVudExpc3RlbmVyIl0sIi0iLG4pfWZ1bmN0aW9uIG4odCl7cmV0dXJuIHRbMV19dmFyIHI9dCgxKSxvPSh0KDMpLHQoMikpO2lmKGUod2luZG93KSwiZ2V0UHJvdG90eXBlT2YiaW4gT2JqZWN0KXtmb3IodmFyIGk9ZG9jdW1lbnQ7aSYmIWkuaGFzT3duUHJvcGVydHkoImFkZEV2ZW50TGlzdGVuZXIiKTspaT1PYmplY3QuZ2V0UHJvdG90eXBlT2YoaSk7aSYmZShpKTtmb3IodmFyIGE9WE1MSHR0cFJlcXVlc3QucHJvdG90eXBlO2EmJiFhLmhhc093blByb3BlcnR5KCJhZGRFdmVudExpc3RlbmVyIik7KWE9T2JqZWN0LmdldFByb3RvdHlwZU9mKGEpO2EmJmUoYSl9ZWxzZSBYTUxIdHRwUmVxdWVzdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkoImFkZEV2ZW50TGlzdGVuZXIiKSYmZShYTUxIdHRwUmVxdWVzdC5wcm90b3R5cGUpO28ub24oImFkZEV2ZW50TGlzdGVuZXItc3RhcnQiLGZ1bmN0aW9uKHQpe2lmKHRbMV0pe3ZhciBlPXRbMV07ImZ1bmN0aW9uIj09dHlwZW9mIGU/dGhpcy53cmFwcGVkPWVbIm5yQHdyYXBwZWQiXT90WzFdPWVbIm5yQHdyYXBwZWQiXTplWyJuckB3cmFwcGVkIl09dFsxXT1yKGUsImZuLSIpOiJmdW5jdGlvbiI9PXR5cGVvZiBlLmhhbmRsZUV2ZW50JiZyLmluUGxhY2UoZSxbImhhbmRsZUV2ZW50Il0sImZuLSIpfX0pLG8ub24oInJlbW92ZUV2ZW50TGlzdGVuZXItc3RhcnQiLGZ1bmN0aW9uKHQpe3ZhciBlPXRoaXMud3JhcHBlZDtlJiYodFsxXT1lKX0pfSx7MToxNSwyOjEsMzoxNH1dLDQ6W2Z1bmN0aW9uKHQpe3ZhciBlPSh0KDMpLHQoMSkpLG49dCgyKTtlLmluUGxhY2Uod2luZG93LFsicmVxdWVzdEFuaW1hdGlvbkZyYW1lIiwibW96UmVxdWVzdEFuaW1hdGlvbkZyYW1lIiwid2Via2l0UmVxdWVzdEFuaW1hdGlvbkZyYW1lIiwibXNSZXF1ZXN0QW5pbWF0aW9uRnJhbWUiXSwicmFmLSIpLG4ub24oInJhZi1zdGFydCIsZnVuY3Rpb24odCl7dFswXT1lKHRbMF0sImZuLSIpfSl9LHsxOjE1LDI6MSwzOjE0fV0sNTpbZnVuY3Rpb24odCl7ZnVuY3Rpb24gZSh0KXt2YXIgZT10WzBdOyJzdHJpbmciPT10eXBlb2YgZSYmKGU9bmV3IEZ1bmN0aW9uKGUpKSx0WzBdPW4oZSwiZm4tIil9dmFyIG49KHQoMyksdCgxKSkscj10KDIpO24uaW5QbGFjZSh3aW5kb3csWyJzZXRUaW1lb3V0Iiwic2V0SW50ZXJ2YWwiLCJzZXRJbW1lZGlhdGUiXSwic2V0VGltZXItIiksci5vbigic2V0VGltZXItc3RhcnQiLGUpfSx7MToxNSwyOjEsMzoxNH1dLDY6W2Z1bmN0aW9uKHQpe2Z1bmN0aW9uIGUoKXtuLmluUGxhY2UodGhpcyxpLCJmbi0iKX12YXIgbj10KDEpLHI9dCgyKSxvPXdpbmRvdy5YTUxIdHRwUmVxdWVzdCxpPVsib25sb2FkIiwib25lcnJvciIsIm9uYWJvcnQiLCJvbmxvYWRzdGFydCIsIm9ubG9hZGVuZCIsIm9ucHJvZ3Jlc3MiLCJvbnJlYWR5c3RhdGVjaGFuZ2UiLCJvbnRpbWVvdXQiXTt3aW5kb3cuWE1MSHR0cFJlcXVlc3Q9ZnVuY3Rpb24odCl7dmFyIGk9bmV3IG8odCk7cmV0dXJuIHIuZW1pdCgibmV3LXhociIsW10saSksbi5pblBsYWNlKGksWyJhZGRFdmVudExpc3RlbmVyIiwicmVtb3ZlRXZlbnRMaXN0ZW5lciJdLCItIixmdW5jdGlvbih0LGUpe3JldHVybiBlfSksaS5hZGRFdmVudExpc3RlbmVyKCJyZWFkeXN0YXRlY2hhbmdlIixlLCExKSxpfSx3aW5kb3cuWE1MSHR0cFJlcXVlc3QucHJvdG90eXBlPW8ucHJvdG90eXBlfSx7MToxNSwyOjF9XSw3OltmdW5jdGlvbih0KXtmdW5jdGlvbiBlKCl7ZnVuY3Rpb24gZSh0KXtpZigic3RyaW5nIj09dHlwZW9mIHQmJnQubGVuZ3RoKXJldHVybiB0Lmxlbmd0aDtpZigib2JqZWN0IiE9dHlwZW9mIHQpcmV0dXJuIHZvaWQgMDtpZigidW5kZWZpbmVkIiE9dHlwZW9mIEFycmF5QnVmZmVyJiZ0IGluc3RhbmNlb2YgQXJyYXlCdWZmZXImJnQuYnl0ZUxlbmd0aClyZXR1cm4gdC5ieXRlTGVuZ3RoO2lmKCJ1bmRlZmluZWQiIT10eXBlb2YgQmxvYiYmdCBpbnN0YW5jZW9mIEJsb2ImJnQuc2l6ZSlyZXR1cm4gdC5zaXplO2lmKCJ1bmRlZmluZWQiIT10eXBlb2YgRm9ybURhdGEmJnQgaW5zdGFuY2VvZiBGb3JtRGF0YSlyZXR1cm4gdm9pZCAwO3RyeXtyZXR1cm4gSlNPTi5zdHJpbmdpZnkodCkubGVuZ3RofWNhdGNoKGUpe3JldHVybiB2b2lkIDB9fWZ1bmN0aW9uIG4odCl7dmFyIG49dGhpcy5wYXJhbXMscj10aGlzLm1ldHJpY3M7aWYoIXRoaXMuZW5kZWQpe3RoaXMuZW5kZWQ9ITA7Zm9yKHZhciBvPTA7cD5vO28rKyl0LnJlbW92ZUV2ZW50TGlzdGVuZXIodVtvXSx0aGlzLmxpc3RlbmVyLCExKTtpZighbi5hYm9ydGVkKXtpZihyLmR1cmF0aW9uPShuZXcgRGF0ZSkuZ2V0VGltZSgpLXRoaXMuc3RhcnRUaW1lLDQ9PT10LnJlYWR5U3RhdGUpe24uc3RhdHVzPXQuc3RhdHVzO3ZhciBhPXQucmVzcG9uc2VUeXBlLHM9ImFycmF5YnVmZmVyIj09PWF8fCJibG9iIj09PWF8fCJqc29uIj09PWE/dC5yZXNwb25zZTp0LnJlc3BvbnNlVGV4dCxkPWUocyk7aWYoZCYmKHIucnhTaXplPWQpLHRoaXMuc2FtZU9yaWdpbil7dmFyIGY9dC5nZXRSZXNwb25zZUhlYWRlcigiWC1OZXdSZWxpYy1BcHAtRGF0YSIpO2YmJihuLmNhdD1mLnNwbGl0KCIsICIpLnBvcCgpKX19ZWxzZSBuLnN0YXR1cz0wO3IuY2JUaW1lPXRoaXMuY2JUaW1lLGkoInhociIsW24scl0pfX19ZnVuY3Rpb24gcih0LGUpe3ZhciBuPWEoZSkscj10LnBhcmFtcztyLmhvc3Q9bi5ob3N0bmFtZSsiOiIrbi5wb3J0LHIucGF0aG5hbWU9bi5wYXRobmFtZSx0LnNhbWVPcmlnaW49bi5zYW1lT3JpZ2lufWZ1bmN0aW9uIG8odCxlKXtyZXR1cm4gZX10KCJsb2FkZXIiKS5mZWF0dXJlcy5wdXNoKCJ4aHIiKTt2YXIgaT10KCJoYW5kbGUiKSxhPXQoMSkscz10KDUpLGQ9dCg2KSx1PVsibG9hZCIsImVycm9yIiwiYWJvcnQiLCJ0aW1lb3V0Il0scD11Lmxlbmd0aCxmPXQoMik7dCgzKSx0KDQpLGQub24oIm5ldy14aHIiLGZ1bmN0aW9uKCl7dGhpcy50b3RhbENicz0wLHRoaXMuY2FsbGVkPTAsdGhpcy5jYlRpbWU9MCx0aGlzLmVuZD1uLHRoaXMuZW5kZWQ9ITEsdGhpcy54aHJHdWlkcz17fX0pLHMuaW5QbGFjZShYTUxIdHRwUmVxdWVzdC5wcm90b3R5cGUsWyJvcGVuIiwic2VuZCJdLCIteGhyLSIsbyksZC5vbigib3Blbi14aHItc3RhcnQiLGZ1bmN0aW9uKHQpe3RoaXMucGFyYW1zPXttZXRob2Q6dFswXX0scih0aGlzLHRbMV0pLHRoaXMubWV0cmljcz17fX0pLGQub24oIm9wZW4teGhyLWVuZCIsZnVuY3Rpb24odCxlKXsibG9hZGVyX2NvbmZpZyJpbiBOUkVVTSYmInhwaWQiaW4gTlJFVU0ubG9hZGVyX2NvbmZpZyYmdGhpcy5zYW1lT3JpZ2luJiZlLnNldFJlcXVlc3RIZWFkZXIoIlgtTmV3UmVsaWMtSUQiLE5SRVVNLmxvYWRlcl9jb25maWcueHBpZCl9KSxkLm9uKCJzZW5kLXhoci1zdGFydCIsZnVuY3Rpb24odCxuKXt2YXIgcj10aGlzLm1ldHJpY3Msbz10WzBdLGk9dGhpcztpZihyJiZvKXt2YXIgYT1lKG8pO2EmJihyLnR4U2l6ZT1hKX10aGlzLnN0YXJ0VGltZT0obmV3IERhdGUpLmdldFRpbWUoKSx0aGlzLmxpc3RlbmVyPWZ1bmN0aW9uKHQpe3RyeXsiYWJvcnQiPT09dC50eXBlJiYoaS5wYXJhbXMuYWJvcnRlZD0hMCksKCJsb2FkIiE9PXQudHlwZXx8aS5jYWxsZWQ9PT1pLnRvdGFsQ2JzJiYoaS5vbmxvYWRDYWxsZWR8fCJmdW5jdGlvbiIhPXR5cGVvZiBuLm9ubG9hZCkpJiZpLmVuZChuKX1jYXRjaChlKXt9fTtmb3IodmFyIHM9MDtwPnM7cysrKW4uYWRkRXZlbnRMaXN0ZW5lcih1W3NdLHRoaXMubGlzdGVuZXIsITEpfSksZC5vbigieGhyLWNiLXRpbWUiLGZ1bmN0aW9uKHQsZSxuKXt0aGlzLmNiVGltZSs9dCxlP3RoaXMub25sb2FkQ2FsbGVkPSEwOnRoaXMuY2FsbGVkKz0xLHRoaXMuY2FsbGVkIT09dGhpcy50b3RhbENic3x8IXRoaXMub25sb2FkQ2FsbGVkJiYiZnVuY3Rpb24iPT10eXBlb2Ygbi5vbmxvYWR8fHRoaXMuZW5kKG4pfSksZC5vbigieGhyLWxvYWQtYWRkZWQiLGZ1bmN0aW9uKHQsZSl7dmFyIG49IiIrZih0KSshIWU7dGhpcy54aHJHdWlkcyYmIXRoaXMueGhyR3VpZHNbbl0mJih0aGlzLnhockd1aWRzW25dPSEwLHRoaXMudG90YWxDYnMrPTEpfSksZC5vbigieGhyLWxvYWQtcmVtb3ZlZCIsZnVuY3Rpb24odCxlKXt2YXIgbj0iIitmKHQpKyEhZTt0aGlzLnhockd1aWRzJiZ0aGlzLnhockd1aWRzW25dJiYoZGVsZXRlIHRoaXMueGhyR3VpZHNbbl0sdGhpcy50b3RhbENicy09MSl9KSxkLm9uKCJhZGRFdmVudExpc3RlbmVyLWVuZCIsZnVuY3Rpb24odCxlKXtlIGluc3RhbmNlb2YgWE1MSHR0cFJlcXVlc3QmJiJsb2FkIj09PXRbMF0mJmQuZW1pdCgieGhyLWxvYWQtYWRkZWQiLFt0WzFdLHRbMl1dLGUpfSksZC5vbigicmVtb3ZlRXZlbnRMaXN0ZW5lci1lbmQiLGZ1bmN0aW9uKHQsZSl7ZSBpbnN0YW5jZW9mIFhNTEh0dHBSZXF1ZXN0JiYibG9hZCI9PT10WzBdJiZkLmVtaXQoInhoci1sb2FkLXJlbW92ZWQiLFt0WzFdLHRbMl1dLGUpfSksZC5vbigiZm4tc3RhcnQiLGZ1bmN0aW9uKHQsZSxuKXtlIGluc3RhbmNlb2YgWE1MSHR0cFJlcXVlc3QmJigib25sb2FkIj09PW4mJih0aGlzLm9ubG9hZD0hMCksKCJsb2FkIj09PSh0WzBdJiZ0WzBdLnR5cGUpfHx0aGlzLm9ubG9hZCkmJih0aGlzLnhockNiU3RhcnQ9KG5ldyBEYXRlKS5nZXRUaW1lKCkpKX0pLGQub24oImZuLWVuZCIsZnVuY3Rpb24odCxlKXt0aGlzLnhockNiU3RhcnQmJmQuZW1pdCgieGhyLWNiLXRpbWUiLFsobmV3IERhdGUpLmdldFRpbWUoKS10aGlzLnhockNiU3RhcnQsdGhpcy5vbmxvYWQsZV0sZSl9KX13aW5kb3cuWE1MSHR0cFJlcXVlc3QmJlhNTEh0dHBSZXF1ZXN0LnByb3RvdHlwZSYmWE1MSHR0cFJlcXVlc3QucHJvdG90eXBlLmFkZEV2ZW50TGlzdGVuZXImJiEvQ3JpT1MvLnRlc3QobmF2aWdhdG9yLnVzZXJBZ2VudCkmJmUoKX0sezE6OCwyOjExLDM6Myw0OjYsNToxNSw2OjEsaGFuZGxlOiJENUR1TFAiLGxvYWRlcjoiRzl6MEJsIn1dLDg6W2Z1bmN0aW9uKHQsZSl7ZS5leHBvcnRzPWZ1bmN0aW9uKHQpe3ZhciBlPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImEiKSxuPXdpbmRvdy5sb2NhdGlvbixyPXt9O2UuaHJlZj10LHIucG9ydD1lLnBvcnQ7dmFyIG89ZS5ocmVmLnNwbGl0KCI6Ly8iKTtyZXR1cm4hci5wb3J0JiZvWzFdJiYoci5wb3J0PW9bMV0uc3BsaXQoIi8iKVswXS5zcGxpdCgiOiIpWzFdKSxyLnBvcnQmJiIwIiE9PXIucG9ydHx8KHIucG9ydD0iaHR0cHMiPT09b1swXT8iNDQzIjoiODAiKSxyLmhvc3RuYW1lPWUuaG9zdG5hbWV8fG4uaG9zdG5hbWUsci5wYXRobmFtZT1lLnBhdGhuYW1lLCIvIiE9PXIucGF0aG5hbWUuY2hhckF0KDApJiYoci5wYXRobmFtZT0iLyIrci5wYXRobmFtZSksci5zYW1lT3JpZ2luPSFlLmhvc3RuYW1lfHxlLmhvc3RuYW1lPT09ZG9jdW1lbnQuZG9tYWluJiZlLnBvcnQ9PT1uLnBvcnQmJmUucHJvdG9jb2w9PT1uLnByb3RvY29sLHJ9fSx7fV0saGFuZGxlOltmdW5jdGlvbih0LGUpe2UuZXhwb3J0cz10KCJENUR1TFAiKX0se31dLEQ1RHVMUDpbZnVuY3Rpb24odCxlKXtmdW5jdGlvbiBuKHQsZSl7dmFyIG49clt0XTtyZXR1cm4gbj9uLmFwcGx5KHRoaXMsZSk6KG9bdF18fChvW3RdPVtdKSx2b2lkIG9bdF0ucHVzaChlKSl9dmFyIHI9e30sbz17fTtlLmV4cG9ydHM9bixuLnF1ZXVlcz1vLG4uaGFuZGxlcnM9cn0se31dLDExOltmdW5jdGlvbih0LGUpe2Z1bmN0aW9uIG4odCl7aWYoIXR8fCJvYmplY3QiIT10eXBlb2YgdCYmImZ1bmN0aW9uIiE9dHlwZW9mIHQpcmV0dXJuLTE7aWYodD09PXdpbmRvdylyZXR1cm4gMDtpZihvLmNhbGwodCwiX19uciIpKXJldHVybiB0Ll9fbnI7dHJ5e3JldHVybiBPYmplY3QuZGVmaW5lUHJvcGVydHkodCwiX19uciIse3ZhbHVlOnIsd3JpdGFibGU6ITAsZW51bWVyYWJsZTohMX0pLHJ9Y2F0Y2goZSl7cmV0dXJuIHQuX19ucj1yLHJ9ZmluYWxseXtyKz0xfX12YXIgcj0xLG89T2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eTtlLmV4cG9ydHM9bn0se31dLGxvYWRlcjpbZnVuY3Rpb24odCxlKXtlLmV4cG9ydHM9dCgiRzl6MEJsIil9LHt9XSxHOXowQmw6W2Z1bmN0aW9uKHQsZSl7ZnVuY3Rpb24gbigpe3ZhciB0PWMuaW5mbz1OUkVVTS5pbmZvO2lmKHQmJnQuYWdlbnQmJnQubGljZW5zZUtleSYmdC5hcHBsaWNhdGlvbklEKXtjLnByb3RvPSJodHRwcyI9PT1mLnNwbGl0KCI6IilbMF18fHQuc3NsRm9ySHR0cD8iaHR0cHM6Ly8iOiJodHRwOi8vIixhKCJtYXJrIixbIm9ubG9hZCIsaSgpXSk7dmFyIGU9ZC5jcmVhdGVFbGVtZW50KCJzY3JpcHQiKTtlLnNyYz1jLnByb3RvK3QuYWdlbnQsZC5ib2R5LmFwcGVuZENoaWxkKGUpfX1mdW5jdGlvbiByKCl7ImNvbXBsZXRlIj09PWQucmVhZHlTdGF0ZSYmbygpfWZ1bmN0aW9uIG8oKXthKCJtYXJrIixbImRvbUNvbnRlbnQiLGkoKV0pfWZ1bmN0aW9uIGkoKXtyZXR1cm4obmV3IERhdGUpLmdldFRpbWUoKX12YXIgYT10KCJoYW5kbGUiKSxzPXdpbmRvdyxkPXMuZG9jdW1lbnQsdT0iYWRkRXZlbnRMaXN0ZW5lciIscD0iYXR0YWNoRXZlbnQiLGY9KCIiK2xvY2F0aW9uKS5zcGxpdCgiPyIpWzBdLGM9ZS5leHBvcnRzPXtvZmZzZXQ6aSgpLG9yaWdpbjpmLGZlYXR1cmVzOltdfTtkW3VdPyhkW3VdKCJET01Db250ZW50TG9hZGVkIixvLCExKSxzW3VdKCJsb2FkIixuLCExKSk6KGRbcF0oIm9ucmVhZHlzdGF0ZWNoYW5nZSIsciksc1twXSgib25sb2FkIixuKSksYSgibWFyayIsWyJmaXJzdGJ5dGUiLGkoKV0pfSx7aGFuZGxlOiJENUR1TFAifV0sMTQ6W2Z1bmN0aW9uKHQsZSl7ZnVuY3Rpb24gbih0LGUsbil7ZXx8KGU9MCksInVuZGVmaW5lZCI9PXR5cGVvZiBuJiYobj10P3QubGVuZ3RoOjApO2Zvcih2YXIgcj0tMSxvPW4tZXx8MCxpPUFycmF5KDA+bz8wOm8pOysrcjxvOylpW3JdPXRbZStyXTtyZXR1cm4gaX1lLmV4cG9ydHM9bn0se31dLDE1OltmdW5jdGlvbih0LGUpe2Z1bmN0aW9uIG4odCxlLG4scil7ZnVuY3Rpb24gbnJXcmFwcGVyKCl7dHJ5e3ZhciBhLHM9aShhcmd1bWVudHMpLGQ9dGhpcyx1PW4mJm4ocyxkKXx8e307by5lbWl0KGUrInN0YXJ0IixbcyxkLHJdLHUpfWNhdGNoKHApe310cnl7cmV0dXJuIGE9dC5hcHBseShkLHMpfWNhdGNoKGYpe3RyeXtvLmVtaXQoZSsiZXJyIixbcyxkLGZdLHUpfWNhdGNoKHApe310aHJvdyBmfWZpbmFsbHl7dHJ5e28uZW1pdChlKyJlbmQiLFtzLGQsYV0sdSl9Y2F0Y2gocCl7fX19cmV0dXJuIHQmJiJmdW5jdGlvbiI9PXR5cGVvZiB0JiZ0LmFwcGx5JiYhdC5fd3JhcHBlZD8oZXx8KGU9IiIpLG5yV3JhcHBlci5fd3JhcHBlZD0hMCxucldyYXBwZXIpOnR9ZnVuY3Rpb24gcih0LGUscixvKXtyfHwocj0iIik7dmFyIGksYSxzLGQ9Ii0iPT09ci5jaGFyQXQoMCk7Zm9yKHM9MDtzPGUubGVuZ3RoO3MrKylhPWVbc10saT10W2FdLGkmJiJmdW5jdGlvbiI9PXR5cGVvZiBpJiZpLmFwcGx5JiYhaS5fd3JhcHBlZCYmKHRbYV09bihpLGQ/YStyOnIsbyxhLHQpKX12YXIgbz10KDEpLGk9dCgyKTtlLmV4cG9ydHM9bixuLmluUGxhY2U9cn0sezE6MSwyOjE0fV19LHt9LFsiRzl6MEJsIiwyLDddKTs8L3NjcmlwdD5kAgEPFgIfAAWcAzxsaW5rIHJlbD0ic3R5bGVzaGVldCIgdHlwZT0idGV4dC9jc3MiIG1lZGlhPSJhbGwiIGhyZWY9Ii9UZW1wbGF0ZXMvcG9ydGFsL1N0eWxlcy9jb21iaW5lZGFsbF8wOUFGQjNGQTQ2NDQ2QzI0Mzg3QjBCMzUyOEMzNDAwRi5jc3MiIC8+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiIgaHJlZj0iL1RlbXBsYXRlcy9wb3J0YWwvU3R5bGVzL2NvbWJpbmVkc2NyZWVuXzdBMzlENkRCQzhFNzQyMDIyMDEwMDZFQUU5MkFCRURCLmNzcyIgLz48bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBtZWRpYT0icHJpbnQiIGhyZWY9Ii9UZW1wbGF0ZXMvcG9ydGFsL1N0eWxlcy9jb21iaW5lZHByaW50Xzc2NDZCMTVBN0FBRTRFRjJFREE0MDM1RDJGQzU2ODY5LmNzcyIgLz5kAgMPFgIfAAX9ATxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii9UZW1wbGF0ZXMvcG9ydGFsL2pzL2NvbWJpbmVkdG9wXzZFNEE5RDNEMEI3MjYzN0JGODg1NDkzM0IzMzU1QjYxLmpzIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgaWQ9IkVwaW5vdmEuRW1haWxPYmZ1c2NhdG9yIiBzcmM9Ii9UZW1wbGF0ZXMvcG9ydGFsL2pzL2VvYi5qcz9yPTgyNDg5N0RCOUIxODY0RkZCQUY3NjI0QTJGQTY3RDk4Ij48L3NjcmlwdD5kAggPFgIfAGVkAgMQZGQWFgIDD2QWBAIBDxYCHgVjbGFzcwUIc2VsZWN0ZWQWAmYPDxYCHgtOYXZpZ2F0ZVVybAUjL2RlZmF1bHQuYXNweD9pZD0yMTYmZXBzbGFuZ3VhZ2U9ZW5kZAIDDxYCHwFlFgJmDw8WAh8CBStodHRwczovL3d3dy5mb3RiYWxsLm5vLy9Db21tdW5pdHkvTWluLXNpZGUvZGQCBQ9kFgRmD2QWAgIBDxYCHwAFQjxhIGhyZWY9Imh0dHBzOi8vd3d3LmZvdGJhbGwubm8vL0NvbW11bml0eS9NaW4tc2lkZS8iPkxvZ2cgaW5uPC9hPmQCAg8PZBYCHgVzdHlsZQUNZGlzcGxheTpub25lO2QCBw9kFgJmDxYCHgtfIUl0ZW1Db3VudAIEFggCAQ9kFgICAQ8PFgQfAgU9L3RlbXBsYXRlcy9wb3J0YWwvcGFnZXMvdG9waWNwYWdlLmFzcHg/aWQ9MzAxNCZlcHNsYW5ndWFnZT1lbh8ABQlCSUxMRVRURVJkZAICD2QWAgIBDw8WBh8CBR1odHRwOi8vbmV0dGJ1dGlray5mb3RiYWxsLm5vLx8ABQpORVRUQlVUSUtLHgZUYXJnZXQFBl9ibGFua2RkAgMPZBYCAgEPDxYEHwIFPS90ZW1wbGF0ZXMvcG9ydGFsL3BhZ2VzL3RvcGljcGFnZS5hc3B4P2lkPTE5NzUmZXBzbGFuZ3VhZ2U9ZW4fAAUGT00gTkZGZGQCBA9kFgICAQ8PFgYfAgUxL3RlbXBsYXRlcy9wb3J0YWwvcGFnZXMvYXJ0aWNsZXBhZ2UuYXNweD9pZD0yNTg0Mx8ABQpFS1NUUkFORVRUHwUFBl9ibGFua2RkAgkPZBYEAgEPDxYCHglNYXhMZW5ndGgCKGRkAgUPDxYCHwAFBFPDuGtkZAILD2QWBGYPZBYGAgEPFgIeCV9QYWdlTGluaygpbEVQaVNlcnZlci5Db3JlLlBhZ2VSZWZlcmVuY2UsIEVQaVNlcnZlciwgVmVyc2lvbj02LjEuMzc5LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49OGZlODNkZWE3MzhiNDViNwMyMTZkAgMPDxYCHwIFSS90ZW1wbGF0ZXMvcG9ydGFsL3BhZ2VzL25hdmlnYXRvcnVuaXRzcmVzdWx0cy5hc3B4P2lkPTI4NzMmZXBzbGFuZ3VhZ2U9ZW5kFgICAw8PFgIfAAUgS2x1YmJlciwgbGFnLCBwZXJzb25lciBvZyBhbmxlZ2dkZAIFDw8WAh8CBUovdGVtcGxhdGVzL3BvcnRhbC9wYWdlcy9uYXZpZ2F0b3JmaXh0dXJlc2Zyb250LmFzcHg/aWQ9Mjg3MiZlcHNsYW5ndWFnZT1lbmQWAgIDDw8WAh8ABRhUZXJtaW5saXN0ZXIgb2cgdGFiZWxsZXJkZAICDw8WAh4HVmlzaWJsZWhkFgQCAQ8PFgIfAgU+L1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UGFnZS5hc3B4P2lkPTI2NTgmZXBzbGFuZ3VhZ2U9ZW5kZAIDDw8WAh8CBUkvdGVtcGxhdGVzL3BvcnRhbC9wYWdlcy9uYXZpZ2F0b3J1bml0c3Jlc3VsdHMuYXNweD9pZD02MDAzJmVwc2xhbmd1YWdlPWVuZGQCDQ9kFgICAQ9kFgJmDxYCHwAFGFbDpWxlcmVuZ2EgTWVubiBTZW5pb3IgQWQCDw8WAh8HKCsEBDI2OTIWDAIBD2QWAgIBD2QWAgIBDxYCHgRocmVmBU0vVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvVGVhbUhvbWUuYXNweD9pZD0yNjgyJmVwc2xhbmd1YWdlPWVuJmNsdWJJZD0xMTIwNxYCAgEPDxYGHgtfaXNFZGl0YWJsZWgeDl9ib3VuZFBhZ2VMaW5rAvoUHglfbGFzdFR5cGUFB0RlZmF1bHRkZAICD2QWAgIBD2QWAgIBDxYCHwkFUS9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9UZWFtQ2FsZW5kYXIuYXNweD9pZD0zNjU3JmVwc2xhbmd1YWdlPWVuJmNsdWJJZD0xMTIwNxYCAgEPDxYGHwpoHwsCyRwfDAUHRGVmYXVsdGRkAgMPZBYCAgEPFgIfCGgWAgIBDxYCHwkFWi9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9UZWFtTWVtYmVyc01hbmFnZW1lbnQuYXNweD9pZD0zMTI1JmVwc2xhbmd1YWdlPWVuJmNsdWJJZD0xMTIwNxYCAgEPDxYGHwpoHwsCtRgfDAUHRGVmYXVsdGRkAgQPZBYCAgEPZBYCAgEPFgIfCQVUL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL1RlYW1Ub3BTY29yZXJzLmFzcHg/aWQ9MjI3OTUmZXBzbGFuZ3VhZ2U9ZW4mY2x1YklkPTExMjA3FgICAQ8PFgYfCmgfCwKLsgEfDAUHRGVmYXVsdGRkAgUPZBYCAgEPZBYCAgEPFgIfCQVUL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL1RlYW1NZW1iZXJzRVBTLmFzcHg/aWQ9MjI3OTcmZXBzbGFuZ3VhZ2U9ZW4mY2x1YklkPTExMjA3FgICAQ8PFgYfCmgfCwKNsgEfDAUHRGVmYXVsdGRkAgYPZBYCAgEPZBYCAgEPFgIfCQVWL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL1RlYW1QZW5hbHR5Q2FyZHMuYXNweD9pZD0yMjc5OCZlcHNsYW5ndWFnZT1lbiZjbHViSWQ9MTEyMDcWAgIBDw8WBh8KaB8LAo6yAR8MBQdEZWZhdWx0ZGQCEQ9kFgICAQ8PFgIfCGdkZAITD2QWBAIBD2QWBAIBD2QWAgIBD2QWAmYPFgIfBAIJFhICAQ9kFggCAQ8WAh8ABQ1Lb250YWt0cGVyc29uZAIDDw8WBB8ABRFTdGVpbiBFcmxlbmQgSG9mZh8CBUgvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvTXlQdWJsaWNQcm9maWxlLmFzcHg/aWQ9MTQ1OTEmZmlrc0lkPTE4NTk4NjdkZAIEDxYCHwAFLiwgPGEgaHJlZj0nbWFpbHRvOmhvZmZAdmlmLm5vJz5ob2ZmQHZpZi5ubzwvYT5kAgUPFgIfAAUKLCA0MTAwNDQ0OGQCAg9kFggCAQ8WAh8ABQ1Lb250YWt0cGVyc29uZAIDDw8WBB8ABQpMYXNzZSBIb2xtHwIFSC9UZW1wbGF0ZXMvUmVsYXRlUGx1cy9QYWdlcy9NeVB1YmxpY1Byb2ZpbGUuYXNweD9pZD0xNDU5MSZmaWtzSWQ9MTg2MDM4NWRkAgQPFgIfAAUwLCA8YSBocmVmPSdtYWlsdG86bGFzc2VAdmlmLm5vJz5sYXNzZUB2aWYubm88L2E+ZAIFDxYCHwAFCiwgOTU5NTk1MzdkAgMPZBYIAgEPFgIfAAUGVHJlbmVyZAIDDw8WBB8ABRFTdGVpbiBFcmxlbmQgSG9mZh8CBUgvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvTXlQdWJsaWNQcm9maWxlLmFzcHg/aWQ9MTQ1OTEmZmlrc0lkPTE4NTk4NjdkZAIEDxYCHwAFLiwgPGEgaHJlZj0nbWFpbHRvOmhvZmZAdmlmLm5vJz5ob2ZmQHZpZi5ubzwvYT5kAgUPFgIfAAUKLCA0MTAwNDQ0OGQCBA9kFggCAQ8WAh8ABQZUcmVuZXJkAgMPDxYEHwAFE0tqZXRpbCBBbmRyZSBSZWtkYWwfAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0xODc3NzU2ZGQCBA8WAh8ABS4sIDxhIGhyZWY9J21haWx0bzpwb3N0QHZpZi5ubyc+cG9zdEB2aWYubm88L2E+ZAIFDxYCHwAFCiwgMjMyNDc4MDhkAgUPZBYIAgEPFgIfAAUKQXNzLnRyZW5lcmQCAw8PFgQfAAUTTWljaGFlbCBTY2hqw7huYmVyZx8CBUgvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvTXlQdWJsaWNQcm9maWxlLmFzcHg/aWQ9MTQ1OTEmZmlrc0lkPTI4NTYxMjhkZAIEDxYCHwAFNCwgPGEgaHJlZj0nbWFpbHRvOm1pY2hhZWxAdmlmLm5vJz5taWNoYWVsQHZpZi5ubzwvYT5kAgUPFgIfAAUKLCA5MTc4NTM3MGQCBg9kFggCAQ8WAh8ABQxLZWVwZXJ0cmVuZXJkAgMPDxYEHwAFD0dqZXJtdW5kIMOYc3RieR8CBUgvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvTXlQdWJsaWNQcm9maWxlLmFzcHg/aWQ9MTQ1OTEmZmlrc0lkPTE5MTc0MjdkZAIEDxYCHwAFNiwgPGEgaHJlZj0nbWFpbHRvOmdqZXJtdW5kQHZpZi5ubyc+Z2plcm11bmRAdmlmLm5vPC9hPmQCBQ8WAh8AZWQCBw9kFggCAQ8WAh8ABRFNYXRlcmlhbGZvcnZhbHRlcmQCAw8PFgQfAAUTUMOlbCBBLiBFbmdlYnJldHNlbh8CBUgvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvTXlQdWJsaWNQcm9maWxlLmFzcHg/aWQ9MTQ1OTEmZmlrc0lkPTE4NjI4NjJkZAIEDxYCHwAFLiwgPGEgaHJlZj0nbWFpbHRvOnBhYWxAdmlmLm5vJz5wYWFsQHZpZi5ubzwvYT5kAgUPFgIfAAUKLCA5NTk1OTUzNmQCCA9kFggCAQ8WAh8ABQ1GeXNpb3RlcmFwZXV0ZAIDDw8WBB8ABQxSb3kgSm9uYXNzZW4fAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0yNzQzNjY2ZGQCBA8WAh8ABUQsIDxhIGhyZWY9J21haWx0bzpyb3kuam9uYXNzZW5AZ21haWwuY29tJz5yb3kuam9uYXNzZW5AZ21haWwuY29tPC9hPmQCBQ8WAh8ABQosIDk3NDA2MDUwZAIJD2QWCAIBDxYCHwAFDUZ5c2lvdGVyYXBldXRkAgMPDxYEHwAFDUVpcmlrIEJqw6Zya2UfAgVIL1RlbXBsYXRlcy9SZWxhdGVQbHVzL1BhZ2VzL015UHVibGljUHJvZmlsZS5hc3B4P2lkPTE0NTkxJmZpa3NJZD0yOTI4ODAxZGQCBA8WAh8ABTIsIDxhIGhyZWY9J21haWx0bzplaXJpa0B2dHRzLm5vJz5laXJpa0B2dHRzLm5vPC9hPmQCBQ8WAh8ABQosIDQ2NDY0OTQyZAIDD2QWAgIBD2QWAgIIDxYCHwQCARYCAgEPZBYCAgMPDxYEHwAFC1RpcHBlbGlnYWVuHwIFRS90ZW1wbGF0ZXMvcG9ydGFsL3BhZ2VzL1RhYmxlUGFnZUVQUy5hc3B4P2lkPTMwMTgmdG91cm5hbWVudElkPTEzODkxOGRkAgMPZBYCAgEPZBYIAgEPDxYEHghJbWFnZVVybAVNL0VQaVNlcnZlckNvbW11bml0eS9Nb2R1bGVzL0ltYWdlR2FsbGVyeS9UaHVtYm5haWxzLzExLzIxMTEvNzYyNTU0XzE0OTc3My5qcGceDUFsdGVybmF0ZVRleHQFGFbDpWxlcmVuZ2EgTWVubiBTZW5pb3IgQWRkAgUPZBYCAgEPDxYEHwAFElbDpWxlcmVuZ2EgRm90YmFsbB8CBTwvVGVtcGxhdGVzL1JlbGF0ZVBsdXMvUGFnZXMvQ2x1YkhvbWUuYXNweD9pZD0yNjcxJmZpa3NJZD0yMzNkZAIHDw8WBB8ABRFPc2xvIEZvdGJhbGxrcmV0cx8CBT8vdGVtcGxhdGVzL3BvcnRhbC9wYWdlcy9kaXN0cmljdHBhZ2UuYXNweD9pZD02NTgmZXBzbGFuZ3VhZ2U9ZW5kZAIJD2QWAgIBDw8WAh8CBSFodHRwOi8vaHR0cDovL3d3dy52aWYtZm90YmFsbC5uby9kZAIVD2QWAmYPFgIeCV9wYWdlTGluaygrBAQ1MjA5FgRmD2QWAmYPFQEXTkZGcyBzYW1hcmJlaWRzcGFydG5lcmVkAgEPZBYCZg8VAwAANC9HbG9iYWwvQWx0ZXJuYXRpdmVfYnVubmJhbm5lcmUvdG9tX2xpbmplXzk2MHg2NC5qcGdkAhkPFgIeCWlubmVyaHRtbAUPTkZGLUZPLUNPLVdFQjAyZAIFDxYCHwAFcDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii9UZW1wbGF0ZXMvcG9ydGFsL2pzL2NvbWJpbmVkXzU0MTM1OEYxQTVGNzc5MDM5MTQwQ0Y2ODQ1NUMzMTg5LmpzIj48L3NjcmlwdD5kAgkPFgIfAGVkGAEFFmN0bDAwJEFkc0xpc3QxJEFkc0xpc3QPD2ZkZPAYXaBdmxhPtnTMKaAa0oNeYqn0" />
 </div>
 
 
             <script type='text/javascript'>
-             $.tablesorter.addParser({
-	                    // set a unique id 
-	                    id: 'ddmmyyyy',
-	                    is: function (s) {
-	                        return false;
-	                    },
-	                    format: function (s) {
-	                        var date = s.split('.');
-	                        return new Date(date[2], date[1], date[0]).getTime();
-	                    },
-	                    type: 'numeric'
-	                });
 
 	                $(document).ready(function () {
 
@@ -52,12 +39,13 @@
 
 	                    $('#tblFixtures').tablesorter(
 						            {
+                                        dateFormat : 'ddmmyyyy', // set the default date format
 						                sortClassAsc: 'aktivStigande', 	// class name for ascending sorting action to header
 						                sortClassDesc: 'aktivFallande', // class name for descending sorting action to header
 						                headerClass: 'inaktiv', 		// class name for headers (th's)
 						                headers:
                                         {
-                                            0: { sorter: 'ddmmyyyy' }
+                                            0: { sorter: 'ddmmyyyy' }//0: { sorter: 'shortDate' } // 
                                         }
 						            }
 					            );
@@ -65,7 +53,7 @@
 			            );
                 </script>
             
-<script src="/ScriptResource.axd?d=E39Refh0TPSIpKLQRjrEbnLztXEXMRZo-S7ZapADDS_v2I36uiynGs1dku9fIKMJdGyWhrTcNcWh6Adm87w8alLknlLPMsg2MTmJcVQeCFXy_sa0MM3eyhgf607vD7XqjtaKBnXpnodkyJVv0k483UyKrII1&amp;t=ffffffffb868b5f4" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=E39Refh0TPSIpKLQRjrEbnLztXEXMRZo-S7ZapADDS_v2I36uiynGs1dku9fIKMJdGyWhrTcNcWh6Adm87w8alLknlLPMsg2MTmJcVQeCFXy_sa0MM3eyhgf607vD7XqjtaKBnXpnodkyJVv0k483UyKrII1&amp;t=33137d1a" type="text/javascript"></script>
 <script src="/ScriptResource.axd?d=IybMPwlw-NYla2GvCtiObzsqXW8lU5NsS1CS3AyTvknopRrb6gcPjRZKlyNqjmDFubmLE57fWEK30ePOTb9wiXWG9zaXHbFCTAoI55bLE2X-6ip_vrO3tBiKgLdDU2DTSIBo4ydF1ezT20EgrNce0zavAJ41&amp;t=2e070b50" type="text/javascript"></script>
 <script src="/ScriptResource.axd?d=_3y_6V-wovyQuLmJakxaOWCqndxR5YbdEKkFSrmVVRbV6I2nVh8ZLAxF9HdBT-hWQQ4sSyX2Uu7YmRNbp-R3AeYfpQuosjilABR_rovJijdLWeJAU1FreFPk_qXgvzD2Vtb_vvVANdDE-CFsirBAHusxEtM1&amp;t=2e070b50" type="text/javascript"></script>
 <script src="/ScriptResource.axd?d=swZDvT3E8HIAF4oj9rY71jG-hffLc2y5cOgjTiOFEEMnw1J6EtU1hHNAAsthMKvB89iGlVGvQxPk_3LFVNvM1QUALnNYukqRvT3j7Gj-wpWE2dGouRdI69RBjuD6IOzbJuKLsIDvad6qyrokD52Upldaly9KY64b_Cpnv8ZYSYRgwfCw0&amp;t=2e070b50" type="text/javascript"></script>
@@ -119,7 +107,7 @@
         </li>
     
         <li>
-            <a id="ctl00_TopLinkList1_rptTopLinks_ctl04_hplTopLink" href="http://ekstranett.fotball.no/" target="_blank">EKSTRANETT</a>
+            <a id="ctl00_TopLinkList1_rptTopLinks_ctl04_hplTopLink" href="/nff/Regler_og_retningslinjer/Liga-verktoykasse/" target="_blank">EKSTRANETT</a>
         </li>
     
         </ul>
@@ -130,7 +118,7 @@
 				
 
 <div class="Search">
-	<input name="ctl00$SearchBar1$txtSearchPhrase" type="text" id="ctl00_SearchBar1_txtSearchPhrase" class="text" />
+	<input name="ctl00$SearchBar1$txtSearchPhrase" type="text" maxlength="40" id="ctl00_SearchBar1_txtSearchPhrase" class="text" />
 	<input type="hidden" name="ctl00$SearchBar1$wmeSearchPhrase_ClientState" id="ctl00_SearchBar1_wmeSearchPhrase_ClientState" />
 	<input type="submit" name="ctl00$SearchBar1$btnSearch" value="Søk" id="ctl00_SearchBar1_btnSearch" class="button" />
 </div>
@@ -222,13 +210,7 @@
                         
                     
                         
-                            <li class="unselected"><a href="/Community/Lag/Blogg/?clubId=11207" id="ctl00_ClubMenuList_ctl02_MenuItemSelected">
-                                <span>Blogg</span>
-                            </a></li>
-                        
-                    
-                        
-                            <li class="unselected"><a href="/Community/Lag/Kalender/?clubId=11207" id="ctl00_ClubMenuList_ctl03_MenuItemSelected">
+                            <li class="unselected"><a href="/Community/Lag/Kalender/?clubId=11207" id="ctl00_ClubMenuList_ctl02_MenuItemSelected">
                                 <span>Kalender</span>
                             </a></li>
                         
@@ -236,19 +218,19 @@
                         
                     
                         
-                            <li class="unselected"><a href="/Community/Lag/Toppscorer/?clubId=11207" id="ctl00_ClubMenuList_ctl05_MenuItemSelected">
+                            <li class="unselected"><a href="/Community/Lag/Toppscorer/?clubId=11207" id="ctl00_ClubMenuList_ctl04_MenuItemSelected">
                                 <span>Toppscorer</span>
                             </a></li>
                         
                     
                         
-                            <li class="unselected"><a href="/Community/Lag/Spillere/?clubId=11207" id="ctl00_ClubMenuList_ctl06_MenuItemSelected">
+                            <li class="unselected"><a href="/Community/Lag/Spillere/?clubId=11207" id="ctl00_ClubMenuList_ctl05_MenuItemSelected">
                                 <span>Spillere</span>
                             </a></li>
                         
                     
                         
-                            <li class="unselected"><a href="/Community/Lag/Gulerode-kort/?clubId=11207" id="ctl00_ClubMenuList_ctl07_MenuItemSelected">
+                            <li class="unselected"><a href="/Community/Lag/Gulerode-kort/?clubId=11207" id="ctl00_ClubMenuList_ctl06_MenuItemSelected">
                                 <span>Gule/røde kort</span>
                             </a></li>
                         
@@ -373,52 +355,56 @@
             
                 <tr>
                     <td><span> Kontaktperson</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl01_hlMyPage" href="/Community/Profil/?fiksId=1859867">Stein Erlend Hoff</a>, <a href='mailto:hoff@vif.no'>hoff@vif.no</a>, 41004448 </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl01_hlMyPage" href="/Community/Profil/?fiksId=1859867">Stein Erlend Hoff</a>, <img id='Eoi_1' class='obfimg' src='/Images/emailimages/d4e6ca2f8b86f0e522b215baa6614fda.png' alt='' /><script type="text/javascript" id="Eos_1"><!--
+document.write(dc(1, 'BE80DF9182D1D090D8D7C8FED8D8D1D68099D1D090D8D7C8FED8D8D1D684D1CAD2D7DFD39983D8DBCCD69EDF82'));//--></script>, 41004448 </td>
                 </tr>
             
                 <tr>
                     <td><span> Kontaktperson</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl02_hlMyPage" href="/Community/Profil/?fiksId=1860385">Lasse Holm</a>, <a href='mailto:lasse@vif.no'>lasse@vif.no</a>, 95959537 </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl02_hlMyPage" href="/Community/Profil/?fiksId=1860385">Lasse Holm</a>, <img id='Eoi_2' class='obfimg' src='/Images/emailimages/5253e8d92aa0b92501e831bb541ae73a.png' alt='' /><script type="text/javascript" id="Eos_2"><!--
+document.write(dc(2, '2D134C02114243034B445B6D485E5E4C41130A4243034B445B6D485E5E4C4117425941444C400A104B485F450D4C11'));//--></script>, 95959537 </td>
                 </tr>
             
                 <tr>
                     <td><span> Trener</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl03_hlMyPage" href="/Community/Profil/?fiksId=1877756">Kjetil Andre Rekdal</a> </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl03_hlMyPage" href="/Community/Profil/?fiksId=1859867">Stein Erlend Hoff</a>, <img id='Eoi_3' class='obfimg' src='/Images/emailimages/d4e6ca2f8b86f0e522b215baa6614fda.png' alt='' /><script type="text/javascript" id="Eos_3"><!--
+document.write(dc(3, 'C6F8A7E9FAA9A8E8A0AFB086A0A0A9AEF8E1A9A8E8A0AFB086A0A0A9AEFCA9B2AAAFA7ABE1FBA0A3B4AEE6A7FA'));//--></script>, 41004448 </td>
+                </tr>
+            
+                <tr>
+                    <td><span> Trener</span></td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl04_hlMyPage" href="/Community/Profil/?fiksId=1877756">Kjetil Andre Rekdal</a>, <img id='Eoi_4' class='obfimg' src='/Images/emailimages/e4aa3d0b9f66172d384eeb72efc29c5c.png' alt='' /><script type="text/javascript" id="Eos_4"><!--
+document.write(dc(4, 'B789D6988BD8D999D1DEC1F7C3C4D8C78990D8D999D1DEC1F7C3C4D8C78DD8C3DBDED6DA908AD1D2C5DF97D68B'));//--></script>, 23247808 </td>
                 </tr>
             
                 <tr>
                     <td><span> Ass.trener</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl04_hlMyPage" href="/Community/Profil/?fiksId=1896356">Kazimierz Stanislaw Sokolowski</a>, 90750871 </td>
-                </tr>
-            
-                <tr>
-                    <td><span> Ass.trener</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl05_hlMyPage" href="/Community/Profil/?fiksId=2856128">Michael Schjønberg</a>, <a href='mailto:michael@vif.no'>michael@vif.no</a> </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl05_hlMyPage" href="/Community/Profil/?fiksId=2856128">Michael Schjønberg</a>, <img id='Eoi_5' class='obfimg' src='/Images/emailimages/c0514a884dd136d433a1072f8db21810.png' alt='' /><script type="text/javascript" id="Eos_5"><!--
+document.write(dc(5, '6E500F41520100400807182E020B0F060D070350490100400807182E020B0F060D070354011A02070F034953080B1C064E0F52'));//--></script>, 91785370 </td>
                 </tr>
             
                 <tr>
                     <td><span> Keepertrener</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl06_hlMyPage" href="/Community/Profil/?fiksId=1917427">Gjermund Østby</a>, <a href='mailto:gjermoe@online.no'>gjermoe@online.no</a>, 95959536 </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl06_hlMyPage" href="/Community/Profil/?fiksId=1917427">Gjermund Østby</a>, <img id='Eoi_6' class='obfimg' src='/Images/emailimages/80af519bf2afc33136d48f8d54174bc6.png' alt='' /><script type="text/javascript" id="Eos_6"><!--
+document.write(dc(6, '271946081B484909414E51674349524A55424D401900484909414E51674349524A55424D401D48534B4E464A001A4142554F07461B'));//--></script> </td>
                 </tr>
             
                 <tr>
                     <td><span> Materialforvalter</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl07_hlMyPage" href="/Community/Profil/?fiksId=1862862">Pål A. Engebretsen</a> </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl07_hlMyPage" href="/Community/Profil/?fiksId=1862862">Pål A. Engebretsen</a>, <img id='Eoi_7' class='obfimg' src='/Images/emailimages/13d70ace79dc1cfe0191c8c9faefcb22.png' alt='' /><script type="text/javascript" id="Eos_7"><!--
+document.write(dc(7, 'E0DE81CFDC8F8ECE868996A08C818190DEC78F8ECE868996A08C818190DA8F948C89818DC7DD86859288C081DC'));//--></script>, 95959536 </td>
                 </tr>
             
                 <tr>
                     <td><span> Fysioterapeut</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl08_hlMyPage" href="/Community/Profil/?fiksId=1901885">Eirik Bjærke</a>, <a href='mailto:eirikbjerke78@yahoo.no'>eirikbjerke78@yahoo.no</a>, 46464942 </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl08_hlMyPage" href="/Community/Profil/?fiksId=2743666">Roy Jonassen</a>, <img id='Eoi_8' class='obfimg' src='/Images/emailimages/b8e98564951cf420383acb134b0c39d7.png' alt='' /><script type="text/javascript" id="Eos_8"><!--
+document.write(dc(8, 'C5FBA4EAF9A8AAA6EBA9ACA4A8A285ABA0B6B6A4ABAAAFEBBCAAB7FBE2A8AAA6EBA9ACA4A8A285ABA0B6B6A4ABAAAFEBBCAAB7FFAAB1A9ACA4A8E2F8A3A0B7ADE5A4F9'));//--></script>, 97406050 </td>
                 </tr>
             
                 <tr>
                     <td><span> Fysioterapeut</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl09_hlMyPage" href="/Community/Profil/?fiksId=2743666">Roy Jonassen</a> </td>
-                </tr>
-            
-                <tr>
-                    <td><span> Lege</span></td>
-                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl10_hlMyPage" href="/Community/Profil/?fiksId=2685293">Finn Strekerud</a> </td>
+                    <td><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhMiddleContentArea_ContactPersoner_rptTeamPersons_ctl09_hlMyPage" href="/Community/Profil/?fiksId=2928801">Eirik Bjærke</a>, <img id='Eoi_9' class='obfimg' src='/Images/emailimages/b275ea9382d22992f8bedf0daa74fe49.png' alt='' /><script type="text/javascript" id="Eos_9"><!--
+document.write(dc(9, 'BA84DB9586D5D494C9CECECCFAD1D3C8D3DF849DD5D494C9CECECCFAD1D3C8D3DF80D5CED6D3DBD79D87DCDFC8D29ADB86'));//--></script>, 46464942 </td>
                 </tr>
             
                 </table>
@@ -457,12 +443,7 @@
 		                    
 		                        <li class="odd">
 				                    <div class="date"></div>
-				                    <strong><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhRightContentArea_ucTeamTournaments_rptTeamTournaments_ctl01_hplTournamentName" href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></strong>
-				                </li>
-		                    
-		                        <li class="odd">
-				                    <div class="date"></div>
-				                    <strong><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhRightContentArea_ucTeamTournaments_rptTeamTournaments_ctl02_hplTournamentName" href="/System-pages/TabellTermin/?tournamentId=135674">NM Menn – ordinære runder</a></strong>
+				                    <strong><a id="ctl00_plhFullContentArea_plhMiddleRightContentArea_plhRightContentArea_ucTeamTournaments_rptTeamTournaments_ctl01_hplTournamentName" href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></strong>
 				                </li>
 		                    
 		                        </ul>
@@ -488,7 +469,7 @@
     </div>
     <div class="contentPadding">
         <div class="imageBlock">
-            <img id="ctl00_plhFullContentArea_plhLeftContentArea_MainInfo_imgClubLogo" Weight="200" src="/EPiServerCommunity/Modules/ImageGallery/Thumbnails/11/2111/1627_4069.jpg" alt="Vålerenga Menn Senior A" style="width:200px;border-width:0px;" />
+            <img id="ctl00_plhFullContentArea_plhLeftContentArea_MainInfo_imgClubLogo" Weight="200" src="/EPiServerCommunity/Modules/ImageGallery/Thumbnails/11/2111/762554_149773.jpg" alt="Vålerenga Menn Senior A" style="width:200px;border-width:0px;" />
                                
         </div>
         <ul class="linkList">
@@ -521,423 +502,710 @@
     
             <div class="contentPadding">
 	            
-<div class="comFix">
-<table class="naviTable" id="tblFixtures">
-    <thead>
-	    <tr class="primary">
-		    <th><span>Dato</span></th>
-		    <th><span>Dag</span></th>
-			<th><span>Tid</span></th>
-			<th><span>Hjemmelag</span></th>
-			<th><span>Res.</span></th>
-			<th><span>Bortelag</span></th>
-			<th><span>Bane</span></th>
-			<th><span>Turnering</span></th>
-			<th><span>Kampnr.</span></th>
-		</tr>
-	</thead>
-	<tbody>
-             
+
+<div id="button_container" class="calendar-bar">
+    <div id="ctl00_plhFullContentArea_plhBottomWideArea_ucFixtures_pnlICalLink" class="ical-tip">
+	
+        <img src="/Templates/Portal/Images/icon_calendar_big.gif" />
+        <a id="inline" class="download" href="#calendar">Last ned kampene til din kalender (iCalendar - gratis)</a>
+        <div style="display: none">
+            <div style="width: 430px; text-align: left" id="calendar">
+                <h2>Last ned kamper</h2>
+                <p>
+                    </p><div class="download">
+		<p>Last ned kalenderfil og importer til din kalender. Du vil ikke få oppdateringer på kamptidspunkter på denne, bruk nederste link under hvis du ønsker det.</p>
+	</div>
+                    <br />
+                    <a href="/templates/portal/pages/GenerateICalendar.aspx?teamId=277" id="ctl00_plhFullContentArea_plhBottomWideArea_ucFixtures_lnkGenerateICal" class="download" onclick="var that=this;_gaq.push(['trackEvent','Download','iCal',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">Last ned fil til din kalender (iCal-format)</a>
+                    <br />
+                    <br />
+                    <span class="download">Kopier link og lim den inn i din kalender. (legg til kalender og lim inn url)</span>
+                    <input name="ctl00$plhFullContentArea$plhBottomWideArea$ucFixtures$inputCopyBox" type="text" id="ctl00_plhFullContentArea_plhBottomWideArea_ucFixtures_inputCopyBox" class="inputboxFancy" onblur="this.style.border = '1px solid gainsboro';" onclick="this.style.border = '1px solid lightcoral'; this.select();" size="200" value="http://www.fotball.no/templates/portal/pages/GenerateICalendar.aspx?teamId=277" /><br />
+                
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                /* This is basic - uses default settings */
+                $("a#inline").fancybox();
+            });
+        </script>
+    
+</div>
+    <div id="mootaTip" class="moota-tip"><a class="big fancybox.iframe" href="http://kalender.fotball.no/subscribers/team-by-id/277"><img src="/Templates/Portal/Images/Moota_turnering_enkel.png" title="Last ned kampene til din mobil kalender(betalingstjeneste)" /> Last ned kampene til din mobil kalender(betalingstjeneste)</a></div>
+</div>
+
+
+    <div class="comFix">
+        <table class="naviTable" id="tblFixtures">
+            <thead>
+                <tr class="primary">
+                    <th><span>
+                        Dato
+                    </span></th>
+                    <th><span>
+                        Dag
+                    </span></th>
+                    <th><span>
+                        Tid
+                    </span></th>
+                    <th><span>
+                        Hjemmelag
+                    </span></th>
+                    <th><span>
+                        Res.
+                    </span></th>
+                    <th><span>
+                        Bortelag
+                    </span></th>
+                    <th><span>
+                        Bane
+                    </span></th>
+                    <th><span>
+                        Turnering
+                    </span></th>
+                    <th><span>
+                        Kampnr.
+                    </span></th>
+                </tr>
+            </thead>
+            <tbody>
+
                 
                         <tr class="">
-		                    <td>16.03.2013</td>
-			                <td>lørdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=298">Brann</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669873">3 : 1</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=5895">Brann stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669873">99120001002</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                28.03.2014</td>
+                            <td>
+                                fredag</td>
+                            <td>
+                                19:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=3">Molde</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889643">2 : 0</a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=1974">Aker stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889643">99120001004</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>01.04.2013</td>
-			                <td>mandag</td>
-			                <td>19:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669853">1 : 0</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=107">Sogndal</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669853">99120001012</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                06.04.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889651">3 : 1</a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=4">Bodø/Glimt</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889651">99120001010</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>05.04.2013</td>
-			                <td>fredag</td>
-			                <td>19:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=270">Odd Ballklubb</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669851">2 : 0</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=8124">Skagerak Arena</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669851">99120001020</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                12.04.2014</td>
+                            <td>
+                                lørdag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=202">Haugesund</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889613"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=986">Haugesund stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889613">99120001019</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>13.04.2013</td>
-			                <td>lørdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669864">0 : 3</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=816">Strømsgodset</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669864">99120001028</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                21.04.2014</td>
+                            <td>
+                                mandag</td>
+                            <td>
+                                15:30</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889659"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=350">Sandnes Ulf</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889659">99120001031</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>16.04.2013</td>
-			                <td>tirsdag</td>
-			                <td>18:30</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=314">Frigg Oslo</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5820864">1 : 6</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7601">Frogner kunstgress</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=135674">NM Menn – ordinære runder</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5820864">99120902001</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                28.04.2014</td>
+                            <td>
+                                mandag</td>
+                            <td>
+                                19:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=797">Sarpsborg 08</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889553"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7285">Sarpsborg st KG</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889553">99120001040</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>19.04.2013</td>
-			                <td>fredag</td>
-			                <td>19:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=261">Start</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669731">1 : 0</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=5172">Sør Arena</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669731">99120001039</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                01.05.2014</td>
+                            <td>
+                                torsdag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889656"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=816">Strømsgodset TF</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889656">99120001047</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>27.04.2013</td>
-			                <td>lørdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669862">2 : 1</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=15">Aalesund</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669862">99120001045</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                05.05.2014</td>
+                            <td>
+                                mandag</td>
+                            <td>
+                                19:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=269">Stabæk</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889734"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=6588">Nadderud stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889734">99120001054</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>01.05.2013</td>
-			                <td>onsdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=267">Ullern</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5844622">1 : 8</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7779">Ullern kunstgress</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=135674">NM Menn – ordinære runder</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5844622">99120902068</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                11.05.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889662"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=198">Viking</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889662">99120001062</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>04.05.2013</td>
-			                <td>lørdag</td>
-			                <td>15:30</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=350">Sandnes Ulf</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669806">1 : 2</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=767">Sandnes stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669806">99120001049</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                16.05.2014</td>
+                            <td>
+                                fredag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=261">Start</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889779"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=5172">Sør Arena</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889779">99120001071</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>08.05.2013</td>
-			                <td>onsdag</td>
-			                <td>19:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669854">1 : 2</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=412">Hønefoss BK</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669854">99120001062</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                20.05.2014</td>
+                            <td>
+                                tirsdag</td>
+                            <td>
+                                19:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889654"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=177">Lillestrøm</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889654">99120001079</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>12.05.2013</td>
-			                <td>søndag</td>
-			                <td>15:30</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=202">Haugesund</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669776">1 : 0</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=986">Haugesund stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669776">99120001068</a>&nbsp;&nbsp;<img src='/templates/portal/images/match_approved.png' title='Kampstatus OK' /></td>
-		                </tr>
+                            <td>
+                                25.05.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=298">Brann</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889568"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=5895">Brann stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889568">99120001081</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>16.05.2013</td>
-			                <td>torsdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669852">2 : 0</a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=2">Tromsø</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669852">99120001079</a></td>
-		                </tr>
+                            <td>
+                                09.06.2014</td>
+                            <td>
+                                mandag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889652"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=15">Aalesund</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889652">99120001092</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>21.05.2013</td>
-			                <td>tirsdag</td>
-			                <td>18:30</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=797">Sarpsborg 08</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669888"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7285">Sarpsborg st KG</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669888">99120001087</a></td>
-		                </tr>
+                            <td>
+                                12.06.2014</td>
+                            <td>
+                                torsdag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=107">Sogndal</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889749"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=173">Fosshaugane Campus</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889749">99120001103</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>25.05.2013</td>
-			                <td>lørdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669865"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=145">Rosenborg</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669865">99120001094</a></td>
-		                </tr>
+                            <td>
+                                06.07.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=270">Odd</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889689"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=8124">Skagerak Arena</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889689">99120001110</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>29.05.2013</td>
-			                <td>onsdag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=712">Asker</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5852881"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId="></a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=135674">NM Menn – ordinære runder</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5852881">99120902099</a></td>
-		                </tr>
+                            <td>
+                                12.07.2014</td>
+                            <td>
+                                lørdag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889661"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=145">Rosenborg</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889661">99120001117</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>22.06.2013</td>
-			                <td>lørdag</td>
-			                <td>15:30</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669856"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=3">Molde</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669856">99120001099</a></td>
-		                </tr>
+                            <td>
+                                19.07.2014</td>
+                            <td>
+                                lørdag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=816">Strømsgodset TF</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889764"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=88">Marienlyst gml</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889764">99120001128</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>30.06.2013</td>
-			                <td>søndag</td>
-			                <td>15:30</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=177">Lillestrøm</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669903"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7349">Åråsen stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669903">99120001106</a></td>
-		                </tr>
+                            <td>
+                                29.07.2014</td>
+                            <td>
+                                tirsdag</td>
+                            <td>
+                                18:30</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889663"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=269">Stabæk</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889663">99120001135</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>07.07.2013</td>
-			                <td>søndag</td>
-			                <td>19:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669857"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=198">Viking</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669857">99120001115</a></td>
-		                </tr>
+                            <td>
+                                03.08.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=198">Viking</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889719"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=9005">Viking Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889719">99120001143</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>14.07.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=412">Hønefoss BK</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669716"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=3778">Aka Arena</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669716">99120001125</a></td>
-		                </tr>
+                            <td>
+                                10.08.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889649"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=797">Sarpsborg 08</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889649">99120001151</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>28.07.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669859"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=797">Sarpsborg 08</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669859">99120001133</a></td>
-		                </tr>
+                            <td>
+                                17.08.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=177">Lillestrøm</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889628"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7349">Åråsen stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889628">99120001159</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>04.08.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=2">Tromsø</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669686"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=3620">Alfheim stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669686">99120001142</a></td>
-		                </tr>
+                            <td>
+                                24.08.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889650"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=298">Brann</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889650">99120001161</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>11.08.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669855"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=261">Start</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669855">99120001149</a></td>
-		                </tr>
+                            <td>
+                                31.08.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=4">Bodø/Glimt</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889583"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=3257">Aspmyra stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889583">99120001170</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>18.08.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=145">Rosenborg</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669836"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=6375">Lerkendal stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669836">99120001155</a></td>
-		                </tr>
+                            <td>
+                                14.09.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889653"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=202">Haugesund</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889653">99120001179</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>25.08.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669860"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=177">Lillestrøm</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669860">99120001164</a></td>
-		                </tr>
+                            <td>
+                                21.09.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889658"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=3">Molde</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889658">99120001189</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>01.09.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=3">Molde</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669746"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=1974">Aker stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669746">99120001169</a></td>
-		                </tr>
+                            <td>
+                                28.09.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=350">Sandnes Ulf</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889674"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=767">Sandnes stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889674">99120001198</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>15.09.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669858"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=298">Brann</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669858">99120001179</a></td>
-		                </tr>
+                            <td>
+                                05.10.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889655"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=107">Sogndal</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889655">99120001207</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>22.09.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=198">Viking</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669761"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=9005">Viking Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669761">99120001190</a></td>
-		                </tr>
+                            <td>
+                                19.10.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=145">Rosenborg</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889704"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=6375">Lerkendal stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889704">99120001213</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>29.09.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669866"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=270">Odd Ballklubb</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669866">99120001194</a></td>
-		                </tr>
+                            <td>
+                                26.10.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889660"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=270">Odd</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889660">99120001221</a></td>
+                        </tr>
                     
                         <tr class="">
-		                    <td>06.10.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=816">Strømsgodset</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669821"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=88">Marienlyst gml</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669821">99120001205</a></td>
-		                </tr>
+                            <td>
+                                02.11.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=15">Aalesund</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889598"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=9508">Color Line Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889598">99120001228</a></td>
+                        </tr>
                     
                         <tr class="odd">
-		                    <td>20.10.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=107">Sogndal</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669701"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=173">Fosshaugane Campus</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669701">99120001216</a></td>
-		                </tr>
+                            <td>
+                                09.11.2014</td>
+                            <td>
+                                søndag</td>
+                            <td>
+                                18:00</td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889657"> : </a></td>
+                            <td>
+                                <a href="/Community/Lag/Hjem/?fiksId=261">Start</a></td>
+                            <td>
+                                <a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
+                            <td>
+                                <a href="/System-pages/TabellTermin/?tournamentId=138918">Tippeligaen</a></td>
+                            <td>
+                                <a href="/System-pages/Kampfakta/?matchId=5889657">99120001238</a></td>
+                        </tr>
                     
-                        <tr class="">
-		                    <td>27.10.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669861"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=202">Haugesund</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669861">99120001222</a></td>
-		                </tr>
-                    
-                        <tr class="odd">
-		                    <td>03.11.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=15">Aalesund</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669791"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=9508">Color Line Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669791">99120001227</a></td>
-		                </tr>
-                    
-                        <tr class="">
-		                    <td>10.11.2013</td>
-			                <td>søndag</td>
-			                <td>18:00</td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=277">Vålerenga</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669863"> : </a></td>
-			                <td><a href="/Community/Lag/Hjem/?fiksId=350">Sandnes Ulf</a></td>
-			                <td><a href="/Community/Anlegg/Hjem/?fiksId=7595">Ullevaal Stadion</a></td>
-			                <td><a href="/System-pages/TabellTermin/?tournamentId=134365">Tippeligaen</a></td>
-			                <td><a href="/System-pages/Kampfakta/?matchId=5669863">99120001238</a></td>
-		                </tr>
-                    
-    </tbody>
-</table>
-</div>
+            </tbody>
+        </table>
+    </div>
+
   
         </div>
 
@@ -968,8 +1236,49 @@
     <!-- /Ads -->
     <div class="Footer">
         <div class="centerContainer">
-            <P>© 2013 Norges Fotballforbund. All rights reserved. Ansvarlig redaktør: <A href="mailto:yngve.haavik@fotball.no">Yngve Haavik</A> - Produktsjef: <A href="mailto:andre.flem@fotball.no">André Flem</A> - <A href="mailto:nff@fotball.no">Kontakt NFF</A> - <A href="http://www.nffsupport.no/" target="_blank">Support</A> <BR />Norges Fotballforbund, Postadresse: NO-0840 Oslo. Telefon 04420, Telefax 21 02 93 01, Besøksadresse: Sognsveien 75 J <BR />Nettsidene laget av: <A href="http://www.makingwaves.no">Making Waves</A></P>
-            <div id="ctl00_ServerID" class="debug" style="color:#464646">NFF-FO-CO-WEB03</div>
+            <table border="0" align="left">
+<tbody>
+<tr>
+<td style="text-align: left; width: 250px;">© 2014 Norges Fotballforbund. All rights reserved.</td>
+<td valign="top" style="width: 250px;"><a href="/toppmeny/Om-NFF/Ansatte-NFF/">Kontakt NFF</a></td>
+</tr>
+<tr>
+<td>Postadresse: NO-0840 Oslo</td>
+<td valign="top"><a title="Support FIKS og fotball.no" href="http://www.nffsupport.no/" target="_blank">Support FIKS og fotball.no </a></td>
+</tr>
+<tr>
+<td>Besøksadresse: Sognsveien 75 J</td>
+<td>Ansvarlig redaktør: <img id='Eoi_10' class='obfimg' src='/Images/emailimages/025a0ddb5d428b051062e01582b3c324.png' alt='' /><script type="text/javascript" id="Eos_10"><!--
+document.write(dc(10, '2B154A041740425D4A4A630B4E5D4C4572150944450547474A495F444D6B40425D4A4A43054E5D4C455211445F47424A4609164D4E59430B4A17'));//--></script></td>
+</tr>
+<tr>
+<td>Telefon 04420 - Telefax 21 02 93 01</td>
+<td>Produktsjef: <img id='Eoi_11' class='obfimg' src='/Images/emailimages/b76e70085eff4499acc6b1a0c6067ef4.png' alt='' /><script type="text/javascript" id="Eos_11"><!--
+document.write(dc(11, '2B154A0417464E476D0BC2594F456A150944450547474A495F444D6B464E474D054E594F454A11445F47424A4609164D4E59430B4A17'));//--></script></td>
+</tr>
+</tbody>
+</table>
+<table border="0" align="right">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Design/implementasjon: <a target="_blank" href="http://www.makingwaves.no">Making Waves</a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Driftes av: <a target="_blank" href="http://sysit.com/">Sysit</a></td>
+</tr>
+</tbody>
+</table>
+            <div id="ctl00_ServerID" class="debug" style="color:#464646">NFF-FO-CO-WEB02</div>
         </div>
         <!-- /centerContainer -->
     </div>
@@ -992,7 +1301,8 @@ Sys.Application.add_init(function() {
 //]]>
 </script>
 </form>
-    
+<script type="text/javascript" src="/Templates/portal/js/combined_541358F1A5F779039140CF68455C3189.js"></script>
+        
 <div id="ctl00_scriptPanel">
 	
 <script language="Javascript">
@@ -1011,16 +1321,21 @@ Sys.Application.add_init(function() {
 </noscript>
 
 <script type="text/javascript">
+
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-5928631-2']);
+    _gaq.push(['_setDomainName', 'fotball.no']);
     _gaq.push(['_trackPageview']);
-    (function() {
+
+    (function () {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
+
 </script>
 
 </div>
+
 </body>
 </html>
