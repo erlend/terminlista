@@ -8,7 +8,10 @@ module Helpers
       event: event,
       user_id: 'anonymous_user',
       properties: properties,
-      context: { userAgent: request.user_agent }
+      context: {
+        userAgent: request.user_agent,
+        ip: request.ip
+      }
     }
     params.delete(:properties) if params[:properties].nil?
 

@@ -26,25 +26,26 @@ describe Helpers do
   end
 
   describe '#track_event' do
-    let(:user_agent) { double 'user agent' }
-    before { helpers.stub_chain(:request, :user_agent).and_return(user_agent) }
+    let(:request_double) { double('request', user_agent: 'foo', ip: '127.0.0.1') }
+    let(:default_context) {{ userAgent: 'foo', ip: '127.0.0.1' }}
+    before { helpers.stub(:request).and_return(request_double) }
 
     it 'reports user agent' do
       expect(Analytics).to receive(:track).
-        with(event: 'foo', user_id: 'anonymous_user', context: { userAgent: user_agent })
+        with(event: 'foo', user_id: 'anonymous_user', context: default_context)
       helpers.track_event('foo')
     end
 
     it 'reports event' do
       expect(Analytics).to receive(:track).
-        with(event: 'bar', user_id: 'anonymous_user', context: { userAgent: user_agent })
+        with(event: 'bar', user_id: 'anonymous_user', context: default_context)
       helpers.track_event('bar')
     end
 
     it 'reports properties' do
       expect(Analytics).to receive(:track).
         with(event: 'bar', user_id: 'anonymous_user', properties: { team: 'Vålerenga' },
-             context: { userAgent: user_agent })
+             context: default_context)
       helpers.track_event('bar', team: 'Vålerenga')
     end
   end
