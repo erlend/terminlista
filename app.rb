@@ -45,7 +45,7 @@ html lang='no'
     meta name='viewport' content='width=device-width, initial-scale=1.0'
     meta name='description' content='Kalendere for norske fotball-lag'
     meta name='author' content='Erlend Finvåg'
-    link rel='stylesheet' href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    link rel='stylesheet' href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
     /[if lt IE 9]
       script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'
     css:
