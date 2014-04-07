@@ -12,6 +12,7 @@ gem 'unicorn'
 gem 'xml-sitemap',  '~> 1.3.2'
 gem 'newrelic_rpm'
 gem 'pry', require: false
+gem 'analytics-ruby', '<1.0'
 
 group :test do
   gem 'rack-test', require: 'rack/test'

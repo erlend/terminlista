@@ -1,5 +1,6 @@
 require 'bundler/setup'
 Bundler.require
+require_relative 'lib/analytics'
 require_relative 'lib/team'
 require_relative 'lib/helpers'
 
@@ -13,6 +14,7 @@ get '/' do
 end
 
 get '/sitemap.xml' do
+  track_event('Get sitemap.xml')
   content_type 'text/xml'
   XmlSitemap::Map.new('terminlista.com') do |m|
     m.add('/', period: :yearly)
@@ -25,6 +27,7 @@ end
 get '/:short_name.?:format?' do |short_name, format|
   @team = Team[short_name]
   if @team
+    track_event('Get calendar', team: @team.name)
     content_type 'text/calendar'
     @team.to_ical
   else
@@ -48,16 +51,10 @@ html lang='no'
     css:
       .container { max-width: 724px; }
     javascript:
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23332601-1']);
-      _gaq.push(['_setDomainName', 'terminlista.com']);
-      _gaq.push(['_trackPageview']);
+      window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+      window.analytics.load("tqwyaiiet1");
+      window.analytics.page();
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
   body
     a href="https://github.com/erlend/terminlista"
       img[style="position: absolute; top: 0; right: 0; border: 0;"
