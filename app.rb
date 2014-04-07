@@ -1,14 +1,11 @@
 require 'bundler/setup'
 Bundler.require
 require_relative 'lib/team'
+require_relative 'lib/helpers'
 
 set :cache, Dalli::Client.new
 
-helpers do
-  def webcal_for short_name
-    "#{request.url.sub(/\ahttps?/, 'webcal')}#{short_name}.ics"
-  end
-end
+helpers Helpers
 
 get '/' do
   @teams = Team.all
