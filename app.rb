@@ -1,6 +1,6 @@
 require 'bundler/setup'
 Bundler.require
-require_relative 'lib/analytics'
+require_relative 'lib/analytics' unless defined?(Analytics)
 require_relative 'lib/team'
 require_relative 'lib/helpers'
 
