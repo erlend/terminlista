@@ -16,11 +16,11 @@ describe Sinatra::Application do
   end
 
   describe 'GET to /short_name.ics' do
-    it 'returns calendar for team' do
+    it 'redirects to calendar' do
       get '/vif.ics'
 
-      expect(last_response.status).to eq 200
-      expect(last_response.content_type).to eq 'text/calendar;charset=utf-8'
+      expect(last_response.status).to eq 301
+      expect(last_response.location).to eq 'http://www.fotball.no/templates/portal/pages/GenerateICalendar.aspx?teamId=277'
     end
 
     it 'returns 404 for invalid team' do

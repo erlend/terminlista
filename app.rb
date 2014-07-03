@@ -4,11 +4,10 @@ require_relative 'lib/analytics' unless defined?(Analytics)
 require_relative 'lib/team'
 require_relative 'lib/helpers'
 
-set :cache, Dalli::Client.new
-
 helpers Helpers
 
 get '/' do
+  last_modified File.mtime(File.expand_path('../config/teams.yml', __FILE__))
   @teams = Team.all
   slim :index
 end
@@ -28,8 +27,7 @@ get '/:short_name.?:format?' do |short_name, format|
   @team = Team[short_name]
   if @team
     track_event('Get calendar', team: @team.name)
-    content_type 'text/calendar'
-    @team.to_ical
+    redirect @team.url, 301
   else
     raise Sinatra::NotFound
   end
