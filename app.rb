@@ -24,7 +24,13 @@ get '/sitemap.xml' do
 end
 
 get '/:short_name.?:format?' do |short_name, format|
-  @team = Team[short_name]
+  @team = if short_name.to_i.to_s == short_name
+            # require 'pry'; binding.pry
+            Team.new(short_name, id: short_name.to_i)
+          else
+            Team[short_name]
+          end
+
   if @team
     track_event('Get calendar', team: @team.name)
     redirect @team.url, 301

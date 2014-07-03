@@ -23,6 +23,13 @@ describe Sinatra::Application do
       expect(last_response.location).to eq 'http://www.fotball.no/templates/portal/pages/GenerateICalendar.aspx?teamId=277'
     end
 
+    it 'redirects to calendar if short_name is numeric' do
+      get '/99999999.ics'
+
+      expect(last_response.status).to eq 301
+      expect(last_response.location).to eq 'http://www.fotball.no/templates/portal/pages/GenerateICalendar.aspx?teamId=99999999'
+    end
+
     it 'returns 404 for invalid team' do
       get '/foo.ics'
 
